@@ -18,7 +18,7 @@ const Route = () => {
         <Row>
           <Col xl={{ span: 10, offset: 1 }} md={12}>
             <Col md={12} xs={12} className="mb-6">
-              <h2 className="display-4 fw-bold ls-sm">Walk By Inspection</h2>
+              <h4 className="display-6 fw-bold ls-sm">Route</h4>
             </Col>
             <Row className="mb-10">
               <Col xl={4} lg={6} md={12} xs={12} className="mb-3">

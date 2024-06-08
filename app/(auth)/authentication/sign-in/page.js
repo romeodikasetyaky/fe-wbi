@@ -52,6 +52,8 @@ const SignIn = () => {
       if (response.status === true) {
         Cookies.set('user_id', response.data.user_id);
         Cookies.set('user_role', response.data.role);
+        Cookies.set('user_name', response.data.name);
+        Cookies.set('user_emai;', response.data.email);
 
         MySwal.fire({
           title: "Success",
@@ -60,7 +62,7 @@ const SignIn = () => {
           showConfirmButton: false,
           timer: 1000
         }).then(() => {
-          router.push('/dashboard');
+          router.push('/');
         });
       }
 
@@ -89,7 +91,7 @@ const SignIn = () => {
             <div className="mb-4">
               <Link href="/" className='mb-3'><Image src="/images/Logo_Solusi_Bangun_Indonesia.svg.png" 
                 className="mb-5" alt="" width={250} height={50}/></Link>
-              <p className="mb-6">Please enter your user information.</p>
+              <h3 className="mb-6 fw-bold">Sign In</h3>
             </div>
             {hasMounted &&
               <Form onSubmit={handleSubmit}>
@@ -113,14 +115,11 @@ const SignIn = () => {
 
                 <div className='mt-5'>
                   <div className="d-grid">
-                    <Button variant="primary text-white" type="submit" disabled={loading}>{loading ? 'Loading...' : "Submit"}</Button>
+                    <Button variant="primary" type="submit" disabled={loading}>{loading ? 'Loading...' : "Submit"}</Button>
                   </div>
-                  <div className="d-md-flex justify-content-between mt-4">
+                  <div className="d-md-flex justify-content-center mt-4">
                     <div className="mb-2 mb-md-0">
                       <Link href="/authentication/sign-up" className="fs-5">Create An Account </Link>
-                    </div>
-                    <div>
-                      <Link href="/authentication/forget-password" className="text-inherit fs-5">Forgot your password?</Link>
                     </div>
                   </div>
                 </div>

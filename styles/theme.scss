@@ -66,3 +66,22 @@
 }
 
 }
+
+.rotate-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+}
+
+.hiddenRow {
+    padding: 0 !important;
+}
+
+.large-checkbox .form-check-input {
+    width: 2em;
+    height: 2em;
+  }
+  
+  .large-checkbox .form-check-label {
+    font-size: 1.25em;
+  }
