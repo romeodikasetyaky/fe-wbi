@@ -14,6 +14,7 @@ import { ActiveProjects, Teams,
 
 // import required data files
 import ProjectsStatsData from "data/dashboard/ProjectsStatsData";
+import NarSatuDataTable from "sub-components/dashboard/NarSatuDataTable";
 
 const Home = () => {
     return (
@@ -26,7 +27,7 @@ const Home = () => {
                         <div>
                             <div className="d-flex justify-content-between align-items-center">
                                 <div className="mb-2 mb-lg-0">
-                                    <h3 className="mb-0  text-white">Projects</h3>
+                                    <h2 className="mb-0  text-white">Walk By Inspection</h2>
                                 </div>
                                 <div>
                                     <Link href="#" className="btn btn-white">Create New Project</Link>
@@ -42,7 +43,8 @@ const Home = () => {
                         )
                     })}
                 </Row>
-                <ActiveProjects />
+                {/* <ActiveProjects /> */}
+                <NarSatuDataTable/>
             </Container>
         </Fragment>
     )

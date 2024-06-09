@@ -144,6 +144,8 @@ const N1 = () => {
         'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify({
+        user_id: Cookies.get('user_id'),
+        user_name: Cookies.get('user_name'),
         wq1_1_rotating_part: wqiSgRotatingParts, // Mesin WQ1
         wq1_1_rotating_part_rm: wqiSgRotatingParts_r,
         wq1_1_hsc: wqiSgHSC,
@@ -253,7 +255,7 @@ const N1 = () => {
         showConfirmButton: false,
         timer: 1000
       }).then(() => {
-
+        router.push('/');
       });
     }
 
