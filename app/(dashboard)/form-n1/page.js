@@ -277,7 +277,7 @@ const N1 = () => {
           <div className="bg-white rounded smooth-shadow-sm">
             <div className="d-flex flex-column align-items-center pt-4 pb-6 px-4">
               <Col md={12} xs={12} className="mb-6">
-                <h3 className=" fw-bold ls-sm">WBI Crusher Limestone Nar 1</h3>
+                <h3 className=" fw-bold ls-sm">Crusher Limestone Nar 1</h3>
               </Col>
               <Col md={12} xs={12} xl={12} className="mb-6">
                 <Form onSubmit={handleSubmit}>

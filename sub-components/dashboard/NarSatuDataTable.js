@@ -1,17 +1,20 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col, Form, Row } from 'react-bootstrap';
 import { useRouter } from 'next/navigation';
 import DataTable from 'react-data-table-component';
 
 const NarSatuDataTable = () => {
-  const [listData, setListData] = useState([]);
   const router = useRouter();
+  const [listData, setListData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredData, setFilteredData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchListNarSatu = async () => {
+      setLoading(true);
       try {
         const list = await fetch(process.env.NEXT_PUBLIC_API_URL + 'area-nar1', {
           method: 'GET',
@@ -24,38 +27,50 @@ const NarSatuDataTable = () => {
         const response = await list.json();
         if (response.status) {
           const updatedData = response.data.map((item, index) => {
-            console.log(item);
             return {
               number: (index + 1).toString(),
               user_name: item.user_name,
               tanggal: item.created_at,
-              id: item.id
+              id: item.id.toString()
             };
           });
 
           setListData(updatedData);
+          setFilteredData(updatedData);
         } else {
-
+          console.log(404);
         }
-
       } catch (error) {
         console.error(error);
       } finally {
-
+        console.log("Fetch completed");
+        setLoading(false);
       }
-    }
+    };
     fetchListNarSatu();
   }, []);
+
+  const searchNarSatu = (e) => {
+    const text = e.target.value.toLowerCase();
+    setSearchQuery(text);
+    const filtered = text === "" ? listData : listData.filter(
+      (item) =>
+        item.user_name.toLowerCase().includes(text) ||
+        item.tanggal.toLowerCase().includes(text) ||
+        item.id.includes(text)
+    );
+    setFilteredData(filtered);
+  };
 
   const customStyles = {
     headCells: {
       style: {
-        backgroundColor: '#f1f5f9', // Your desired header background color
-        color: '#58595b',              // Header text color
-        fontSize: '16px',           // Header font size
+        backgroundColor: '#f1f5f9', 
+        color: '#58595b',             
+        fontSize: '16px',           
         fontWeight: 'normal',
-        BorderTop: '1px solid #58595b',        // Header font weight
-        paddingLeft: '20px',        // Add padding to the left of header cells
+        BorderTop: '1px solid #58595b',        
+        paddingLeft: '20px',       
         paddingRight: '20px',
       },
     },
@@ -68,8 +83,8 @@ const NarSatuDataTable = () => {
     },
     cells: {
       style: {
-        paddingLeft: '20px',        // Add padding to the left of body cells
-        paddingRight: '20px',       // Add padding to the right of body cells
+        paddingLeft: '20px',        
+        paddingRight: '20px',       
       },
     },
   };
@@ -110,16 +125,32 @@ const NarSatuDataTable = () => {
       <Row className="mt-6">
         <Col md={12} xs={12}>
           <Card>
-            <Card.Header className="bg-white  py-4">
-              <h4 className="mb-0">WBI Crusher Limestone Nar 1</h4>
+            <Card.Header className="bg-white py-4 d-flex justify-content-between align-items-center">
+              <h4 className="mb-0">Crusher Limestone Nar 1</h4>
+              <Form className="d-flex align-items-center">
+                <Form.Control type="text" placeholder="Search" className="ml-3" 
+                  value={searchQuery}
+                  onChange={searchNarSatu}
+                />
+              </Form>
             </Card.Header>
-            <DataTable
-              columns={columns}
-              data={listData}
-              pagination
-              highlightOnHover
-              customStyles={customStyles}
-            />
+            {loading ? (
+              <div className='d-flex justify-content-center mt-3'>
+                <p>Loading...</p>
+              </div>
+            ) : filteredData.length > 0 ? (
+              <DataTable
+                columns={columns}
+                data={filteredData}
+                pagination
+                highlightOnHover
+                customStyles={customStyles}
+              />
+            ) : (
+              <div className='d-flex justify-content-center mt-3'>
+                <p>Loading...</p>
+              </div>
+            )}
             <Card.Footer className="bg-white text-center">
             </Card.Footer>
           </Card>

@@ -27,24 +27,17 @@ const Home = () => {
                         <div>
                             <div className="d-flex justify-content-between align-items-center">
                                 <div className="mb-2 mb-lg-0">
-                                    <h2 className="mb-0  text-white">Walk By Inspection</h2>
+                                    <h1 className="mb-0  text-white fw-bold">Walk By Inspection</h1>
                                 </div>
                                 <div>
-                                    <Link href="#" className="btn btn-white">Create New Project</Link>
+                                    <Link href="/route" className="btn btn-white">Create New Project</Link>
                                 </div>
                             </div>
                         </div>
                     </Col>
-                    {ProjectsStatsData.map((item, index) => {
-                        return (
-                            <Col xl={3} lg={6} md={12} xs={12} className="mt-6" key={index}>
-                                <StatRightTopIcon info={item} />
-                            </Col>
-                        )
-                    })}
+                    <NarSatuDataTable/>
                 </Row>
-                {/* <ActiveProjects /> */}
-                <NarSatuDataTable/>
+
             </Container>
         </Fragment>
     )
