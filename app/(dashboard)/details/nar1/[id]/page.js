@@ -183,7 +183,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiRedTemp_r' name="wqiRedTemp_r" placeholder=""
                           value={data.wq1_2_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_2_temp) > 60 ? 'Tidak Normal': '' }</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_2_temp) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Seal</td>
