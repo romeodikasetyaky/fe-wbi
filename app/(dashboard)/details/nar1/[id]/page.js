@@ -39,13 +39,13 @@ const detailsNarSatu = ({ params }) => {
                   <Table responsive bordered className="text-nowrap mb-0">
                     <thead>
                       <tr>
-                        <th style={{ backgroundColor: 'var(--bs-gray-100)', width: '7%' }} className='text-center'>No</th>
-                        <th style={{ backgroundColor: 'var(--bs-gray-100)' }} className='text-center'>HAC</th>
-                        <th style={{ backgroundColor: 'var(--bs-gray-100)' }} className='text-center'>Task</th>
-                        <th style={{ backgroundColor: 'var(--bs-gray-100)' }} className='text-center'>Standard</th>
-                        <th style={{ backgroundColor: 'var(--bs-gray-100)', width: '10%' }} className='text-center'>Actual Value</th>
-                        <th style={{ backgroundColor: 'var(--bs-gray-100)' }} className='text-center'>Remark</th>
-                        <th style={{ backgroundColor: 'var(--bs-gray-100)' }} className='text-center'>Status</th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '7%' }} className='text-center'><b>No</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>HAC</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Task</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Standard</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '10%' }} className='text-center'><b>Actual Value</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Remark</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Status</b></th>
                       </tr>
                     </thead>
                     <tbody>

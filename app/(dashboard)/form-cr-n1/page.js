@@ -277,19 +277,19 @@ const N1 = () => {
           <div className="bg-white rounded smooth-shadow-sm">
             <div className="d-flex flex-column align-items-center pt-4 pb-6 px-4">
               <Col md={12} xs={12} className="mb-6">
-                <h3 className=" fw-bold ls-sm">Crusher Limestone Nar 1</h3>
+                <h3 className=" fw-bold ls-sm">Crusher Limestone NAR 1</h3>
               </Col>
               <Col md={12} xs={12} xl={12} className="mb-6">
                 <Form onSubmit={handleSubmit}>
                   <Table responsive bordered className="text-nowrap mb-0">
                     <thead>
                       <tr>
-                        <th style={{backgroundColor: 'var(--bs-gray-100)', width: '7%'}} className='text-center'>No</th>
-                        <th style={{backgroundColor: 'var(--bs-gray-100)'}} className='text-center'>HAC</th>
-                        <th style={{backgroundColor: 'var(--bs-gray-100)'}} className='text-center'>Task</th>
-                        <th style={{backgroundColor: 'var(--bs-gray-100)'}} className='text-center'>Standard</th>
-                        <th style={{backgroundColor: 'var(--bs-gray-100)', width: '10%'}} className='text-center'>Actual Value</th>
-                        <th style={{backgroundColor: 'var(--bs-gray-100)'}} className='text-center'>Remark</th>
+                        <th style={{backgroundColor:  '#F5333C', color: '#ffffff', width: '7%'}} className='<text-center'><b>No</b></th>
+                        <th style={{backgroundColor:  '#F5333C', color: '#ffffff'}} className='text-center'><b>HAC</b></th>
+                        <th style={{backgroundColor:  '#F5333C', color: '#ffffff'}} className='text-center'><b>Task</b></th>
+                        <th style={{backgroundColor:  '#F5333C', color: '#ffffff'}} className='text-center'><b>Standard</b></th>
+                        <th style={{backgroundColor:  '#F5333C', color: '#ffffff', width: '10%'}} className='text-center'><b>Actual Value</b></th>
+                        <th style={{backgroundColor:  '#F5333C', color: '#ffffff'}} className='text-center'><b>Remark</b></th>
                       </tr>
                     </thead>
                     <tbody>
