@@ -65,8 +65,8 @@ const NarSatuDataTable = () => {
   const customStyles = {
     headCells: {
       style: {
-        backgroundColor: '#f1f5f9', 
-        color: '#58595b',             
+        backgroundColor: '#58595b', 
+        color: '#f1f1f1',             
         fontSize: '16px',           
         fontWeight: 'normal',
         BorderTop: '1px solid #58595b',        
@@ -91,24 +91,24 @@ const NarSatuDataTable = () => {
 
   const columns = [
     {
-      name: "No",
+      name: <b>No</b>,
       selector: (row) => row.number,
       sortable: true,
       width: '150px',
     },
     {
-      name: "Tanggal",
+      name: <b>Tanggal</b>,
       selector: (row) => row.tanggal,
       sortable: true,
       width: '250px',
     },
     {
-      name: "Nama Inspektor",
+      name: <b>Nama Inspektor</b>,
       selector: (row) => row.user_name,
       sortable: true,
     },
     {
-      name: "Details",
+      name: <b>Details</b>,
       selector: (row) => <Button onClick={() => handleButtonClick(row.id)}>View</Button>,
       sortable: false,
       button: true,
