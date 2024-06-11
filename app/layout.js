@@ -9,6 +9,9 @@ export default function RootLayout({ children }) {
 
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" href="/images/sbi-logo-head.png" sizes="32x32" />
+            </head>
             <body className='bg-light'>
                 <NextTopLoader 
                     color="#bdd646"

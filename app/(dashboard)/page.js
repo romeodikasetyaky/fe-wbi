@@ -30,7 +30,7 @@ const Home = () => {
                                     <h1 className="mb-0  text-white fw-bold">Walk By Inspection</h1>
                                 </div>
                                 <div>
-                                    <Link href="/route" className="btn btn-white">Create New Project</Link>
+                                    <Link href="/route" className="btn btn-white">Fill in Report</Link>
                                 </div>
                             </div>
                         </div>

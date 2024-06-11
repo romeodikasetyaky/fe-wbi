@@ -79,7 +79,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiSgRotatingParts_r' name="wqiSgRotatingParts_r" placeholder=""
                           value={data.wq1_1_rotating_part_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_rotating_part ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b>{data.wq1_1_rotating_part ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>High Speed Cover</td>
@@ -96,7 +96,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiSgHSC_r' name="wqiSgHSC_r" placeholder=""
                           value={data.wq1_1_hsc_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_hsc ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_hsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Low Speed Cover</td>
@@ -113,7 +113,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiSgLSC_r' name="wqiSgLSC_r" placeholder=""
                           value={data.wq1_1_lsc_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_lsc ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_lsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Cover Sepanjang Wobler</td>
@@ -130,7 +130,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiSgCSW_r' name="wqiSgCSW_r" placeholder=""
                           value={data.wq1_1_csw_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_csw ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_csw ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Remaining guarding</td>
@@ -147,7 +147,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiSgRG_r' name="wqiSgRG_r" placeholder=""
                           value={data.wq1_1_remaining_guarding_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_remaining_guarding ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_remaining_guarding ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       {/* REDUCER */}
                       <tr>
@@ -170,7 +170,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiRedNoise_r' name="wqiRedNoise_r" placeholder=""
                           value={data.wq1_2_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
@@ -200,7 +200,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiRedSeal_r' name="wqiRedSeal_r" placeholder=""
                           value={data.wq1_2_seal_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_seal ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Level oli</td>
@@ -217,7 +217,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiRedLevelOli_r' name="wqiRedLevelOli_r" placeholder=""
                           value={data.wq1_2_level_oil_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_level_oil ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_level_oil ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Driver Sprocket</td>
@@ -234,7 +234,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiRedRS_r' name="wqiRedRS_r" placeholder=""
                           value={data.wq1_2_drive_s_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_drive_s ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_drive_s ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -252,7 +252,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiRedDVS_r' name="wqiRedDVS_r" placeholder=""
                           value={data.wq1_2_driven_s_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_driven_s ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_driven_s ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Chain</td>
@@ -269,7 +269,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiRedChain_r' name="wqiRedChain_r" placeholder=""
                           value={data.wq1_2_chain_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_chain ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_chain ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Coupling</td>
@@ -286,7 +286,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiRedCoup_r' name="wqiRedCoup_r" placeholder=""
                           value={data.wq1_2_coupling_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_coupling ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_coupling ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       {/* BEARING HEAD FIX */}
@@ -310,7 +310,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiBhfNoise_r' name="wqiBhfNoise_r" placeholder=""
                           value={data.wq1_3_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_3_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_3_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -324,7 +324,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiBhfTemp_r' name="wqiBhfTemp_r" placeholder=""
                           value={data.wq1_3_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_3_temp) < 40 ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_3_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       {/* 4. Bearing head free */}
@@ -348,7 +348,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiBhfrNoise_r' name="wqiBhfrNoise_r" placeholder=""
                           value={data.wq1_4_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_4_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_4_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -362,7 +362,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiBhfrTemp_r' name="wqiBhfrTemp_r" placeholder=""
                           value={data.wq1_4_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_4_temp) < 40 ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_4_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       {/* 5. Bearing Free (other wobler) */}
@@ -386,7 +386,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiBfNoise_r' name="wqiBfNoise_r" placeholder=""
                           value={data.wq1_5_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_5_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_5_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -400,7 +400,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiBfTemp_r' name="wqiBfTemp_r" placeholder=""
                           value={data.wq1_5_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_5_temp) < 40 ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_5_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -418,7 +418,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiBfTc_r' name="wqiBfTc_r" placeholder=""
                           value={data.wq1_5_tc_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_5_tc ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_5_tc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       {/* 6. Casing */}
@@ -442,7 +442,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='wqiCClean_r' name="wqiCClean_r" placeholder=""
                           value={data.wq1_6_cleanliness_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_6_cleanliness ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_6_cleanliness ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       {/* END WQ1 */}
@@ -477,7 +477,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hc1SgRotpart_r' name="hc1SgRotpart_r" placeholder=""
                           value={data.hc1_1_rotating_part_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_1_rotating_part ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_1_rotating_part ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -495,7 +495,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hc1SgHsc_r' name="hc1SgHsc_r" placeholder=""
                           value={data.hc1_1_hsc_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_1_hsc ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_1_hsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -513,7 +513,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hc1SgRg_r' name="hc1SgRg_r" placeholder=""
                           value={data.hc1_1_remaining_guarding_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_1_remaining_guarding ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_1_remaining_guarding ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -536,7 +536,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hc1BhfrNoise_r' name="hc1BhfrNoise_r" placeholder=""
                           value={data.hc1_2_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_2_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_2_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -554,7 +554,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hc1BhfrSeal_r' name="hc1BhfrSeal_r" placeholder=""
                           value={data.hc1_2_seal_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_2_seal ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_2_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -568,7 +568,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hc1BhfrTemp_r' name="hc1BhfrTemp_r" placeholder=""
                           value={data.hc1_2_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_2_temp) < 60 ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_2_temp) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -591,7 +591,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hc1BhfreNoise_r' name="hc1BhfreNoise_r" placeholder=""
                           value={data.hc1_3_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_3_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_3_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -609,7 +609,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hc1BhfreSeal_r' name="hc1BhfreSeal_r" placeholder=""
                           value={data.hc1_3_seal_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_3_seal ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_3_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -623,7 +623,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hc1BhfreTemp_r' name="hc1BhfreTemp_r" placeholder=""
                           value={data.hc1_3_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_3_temp) ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_3_temp) ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -646,7 +646,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hciRbpNoise_r' name="hciRbpNoise_r" placeholder=""
                           value={data.hc1_4_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -664,7 +664,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hciRbpSeal_r' name="hciRbpSeal_r" placeholder=""
                           value={data.hc1_4_seal_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_seal ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -678,7 +678,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hciRbpTemp_r' name="hciRbpTemp_r" placeholder=""
                           value={data.hc1_4_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_4_temp) < 60 ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_4_temp) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -696,7 +696,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hciRbpLevelOli_r' name="hciRbpLevelOli_r" placeholder=""
                           value={data.hc1_4_level_oil_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_level_oil ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_level_oil ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -714,7 +714,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hciRbpCD_r' name="hciRbpCD_r" placeholder=""
                           value={data.hc1_4_cd_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_cd ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_cd ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -732,7 +732,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hciRbpDvS_r' name="hciRbpDvS_r" placeholder=""
                           value={data.hc1_4_drive_s_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_drive_s ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_drive_s ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -750,7 +750,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hciRbpDvnS_r' name="hciRbpDvnS_r" placeholder=""
                           value={data.hc1_4_driven_s_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_driven_s ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_driven_s ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -773,7 +773,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hciRbpBpNoise_r' name="hciRbpBpNoise_r" placeholder=""
                           value={data.hc1_5_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_5_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_5_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -791,7 +791,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hciRbpBpSeal_r' name="hciRbpBpSeal_r" placeholder=""
                           value={data.hc1_5_seal_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_5_seal ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_5_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -805,7 +805,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hciRbpBpTemp_r' name="hciRbpBpTemp_r" placeholder=""
                           value={data.hc1_5_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_5_temp) < 40 ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_5_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -828,7 +828,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hci6noise_r' name="hci6noise_r" placeholder=""
                           value={data.hc1_6_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_6_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_6_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -846,7 +846,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hci6seal_r' name="hci6seal_r" placeholder=""
                           value={data.hc1_6_seal_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_6_seal ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_6_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -860,7 +860,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hci6temp_r' name="hci6temp_r" placeholder=""
                           value={data.hc1_6_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_6_temp) < 40 ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_6_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -883,7 +883,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hci7noise_r' name="hci7noise_r" placeholder=""
                           value={data.hc1_7_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_7_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_7_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -897,7 +897,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hci7temp_r' name="hci7temp_r" placeholder=""
                           value={data.hc1_7_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_7_temp) < 40 ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_7_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -920,7 +920,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hci8noise_r' name="hci8noise_r" placeholder=""
                           value={data.hc1_8_noise_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_8_noise ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_8_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -934,7 +934,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hci8temp_r' name="hci8temp_r" placeholder=""
                           value={data.hc1_8_temp_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_8_temp) < 40 ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_8_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -957,7 +957,7 @@ const detailsNarSatu = ({ params }) => {
                           style={{ height: '65px' }} type="text" id='hci9cesing_r' name="hci9cesing_r" placeholder=""
                           value={data.hc1_9_cleanliness_rm}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_9_cleanliness ? '': 'Tidak Normal'}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_9_cleanliness ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       {/* END HC1 */}

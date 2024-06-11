@@ -103,7 +103,7 @@ const NarSatuDataTable = () => {
       width: '250px',
     },
     {
-      name: "Nama inspeksi",
+      name: "Nama Inspektor",
       selector: (row) => row.user_name,
       sortable: true,
     },
