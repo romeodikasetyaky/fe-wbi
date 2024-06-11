@@ -2,7 +2,7 @@
 import NextTopLoader from 'nextjs-toploader';
 import 'styles/theme.scss';
 export const metadata = {
-    title: 'Solusi Bangun Indonesia',
+    title: 'Walk-by Inspection (CBM)',
 }
 
 export default function RootLayout({ children }) {

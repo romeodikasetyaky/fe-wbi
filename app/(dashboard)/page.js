@@ -27,7 +27,9 @@ const Home = () => {
                         <div>
                             <div className="d-flex justify-content-between align-items-center">
                                 <div className="mb-2 mb-lg-0">
-                                    <h1 className="mb-0  text-white fw-bold">Walk By Inspection</h1>
+                                    <h1 className="mb-0  text-white fw-bold">Walk-by Inspection</h1>
+                                    <h2></h2>
+                                    <h4 className="mb-0  text-white fw">Condition-based Monitoring</h4>
                                 </div>
                                 <div>
                                     <Link href="/route" className="btn btn-white">Fill in Report</Link>

@@ -1,9 +1,9 @@
 export const n1 = [
 	{
-		plantitle: 'Crusher Limestone Nar 1',
+		plantitle: 'Crusher Limestone NAR 1',
 		buttonText: 'Fill in Report',
 		buttonClass: 'outline-primary',
-		url: '/form-n1',
+		url: '/form-cr-n1',
 	}
 ];
 
@@ -16,15 +16,15 @@ export const n2 = [
 	}
 ];
 
-export const kiln = [
+export const reclaimer = [
 	{
-		plantitle: 'Kiln Feed',
+		plantitle: 'Reclaimer NAR 1',
 		buttonText: 'Fill in Report',
 		buttonClass: 'outline-primary',
-		url: '/kiln-feed',
+		url: '/form-rec-n1',
 	}
 ];
 
-export const PricingPlansData = [n1, n2, kiln];
+export const PricingPlansData = [n1, n2, reclaimer];
 
 export default PricingPlansData;
