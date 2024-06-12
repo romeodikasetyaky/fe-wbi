@@ -21,7 +21,7 @@ export const reclaimer = [
 		plantitle: 'Reclaimer NAR 1',
 		buttonText: 'Fill in Report',
 		buttonClass: 'outline-primary',
-		url: '/form-rec-n1',
+		url: '/form-re1',
 	}
 ];
 
