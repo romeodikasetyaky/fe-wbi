@@ -32,7 +32,7 @@ const detailsNarSatu = ({ params }) => {
           <div className="bg-white rounded smooth-shadow-sm">
             <div className="d-flex flex-column align-items-center pt-4 pb-6 px-4">
               <Col md={12} xs={12} className="mb-6">
-                <h3 className=" fw-bold ls-sm">Crusher Limestone Nar 1</h3>
+                <h3 className=" fw-bold ls-sm">Crusher Limestone NAR 1</h3>
               </Col>
               <Col md={12} xs={12} xl={12} className="mb-6">
                 <Form>
@@ -961,6 +961,920 @@ const detailsNarSatu = ({ params }) => {
 
                       </tr>
                       {/* END HC1 */}
+
+                      {/* BC1 */}
+                      <tr>
+                        <td rowSpan={73} className='text-center align-middle'>
+                          <span>2</span>
+                        </td>
+                        <td rowSpan={73} className='text-center align-middle rotate-text'>
+                          <b>NR.213-BC1</b>
+                        </td>
+                      </tr>
+                      {/* SAFETY GUARD */}
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>1. Safety Guard</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rotating parts</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSgRotatingParts'
+                            name='crbciSgRotatingParts'
+                            className="large-checkbox"
+                            checked={data.crbc1_1_rotating_part}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSgRotatingParts_r' name="crbciSgRotatingParts_r" placeholder=""
+                          value={data.crbc1_1_rotating_part_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_1_rotating_part ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>High Speed Cover</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSgHSC'
+                            name='crbciSgHSC'
+                            className="large-checkbox"
+                            checked={data.crbc1_1_hsc}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSgHSC_r' name="crbciSgHSC_r" placeholder=""
+                          value={data.crbc1_1_hsc_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc1_1_hsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Low Speed Cover</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSgLSC'
+                            name='crbciSgLSC'
+                            className="large-checkbox"
+                            checked={data.crbc1_1_lsc}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSgLSC_r' name="crbciSgLSC_r" placeholder=""
+                          value={data.crbc1_1_lsc_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc1_1_lsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Cover Sepanjang Belt</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSgCSB'
+                            name='crbciSgCSB'
+                            className="large-checkbox"
+                            checked={data.crbc1_1_csb}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSgCSB_r' name="crbciSgCSB_r" placeholder=""
+                          value={data.crbc1_1_csb_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc1_1_csb ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Remaining guarding</td>
+                        <td className='align-middle'>All in place and not loose</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSgRG'
+                            name='crbciSgRG'
+                            className="large-checkbox"
+                            checked={data.crbc1_1_remaining_guarding}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSgRG_r' name="crbciSgRG_r" placeholder=""
+                          value={data.crbc1_1_remaining_guarding_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc1_1_remaining_guarding ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>2. Head Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadLagging'
+                            name='crbciHeadLagging'
+                            className="large-checkbox"
+                            checked={data.crbc1_2_lagging}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadLagging_r' name="crbciHeadLagging_r" placeholder=""
+                          value={data.crbc1_2_lagging_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_2_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Scrapper Primary</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadPrimary'
+                            name='crbciHeadPrimary'
+                            className="large-checkbox"
+                            checked={data.crbc1_2_primary}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadPrimary_r' name="crbciHeadPrimary_r" placeholder=""
+                          value={data.crbc1_2_primary_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_2_primary ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Scrapper Secondary</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadSecondary'
+                            name='crbciHeadSecondary'
+                            className="large-checkbox"
+                            checked={data.crbc1_2_secondary}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadSecondary_r' name="crbciHeadSecondary_r" placeholder=""
+                          value={data.crbc1_2_secondary_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_2_secondary ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Fix</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadFixNoise'
+                            name='crbciHeadFixNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_2_fix_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadFixNoise_r' name="crbciHeadFixNoise_r" placeholder=""
+                          value={data.crbc1_2_fix_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_2_fix_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciHeadFixTemp' name="crbciHeadFixTemp" placeholder=""
+                          value={data.crbc1_2_fix_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadFixTemp_r' name="crbciHeadFixTemp_r"placeholder=""
+                          value={data.crbc1_2_fix_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_2_fix_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Free</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadFreeNoise'
+                            name='crbciHeadFreeNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_2_free_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadFreeNoise_r' name="crbciHeadFreeNoise_r" placeholder=""
+                          value={data.crbc1_2_free_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_2_free_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciHeadFreeTemp' name="crbciHeadFreeTemp" placeholder=""
+                          value={data.crbc1_2_free_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadFreeTemp_r' name="crbciHeadFreeTemp_r"placeholder=""
+                          value={data.crbc1_2_free_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_2_free_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Reducer</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadRedNoise'
+                            name='crbciHeadRedNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_2_red_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadRedNoise_r' name="crbciHeadRedNoise_r" placeholder=""
+                          value={data.crbc1_2_red_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_2_red_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciHeadRedTemp' name="crbciHeadRedTemp" placeholder=""
+                          value={data.crbc1_2_red_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadRedTemp_r' name="crbciHeadRedTemp_r"placeholder=""
+                          value={data.crbc1_2_red_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_2_red_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Seal</td>
+                        <td className='align-middle'>No leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadRedSeal'
+                            name='crbciHeadRedSeal'
+                            className="large-checkbox"
+                            checked={data.crbc1_2_red_seal}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadRedSeal_r' name="crbciHeadRedSeal_r" placeholder=""
+                          value={data.crbc1_2_red_seal_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_2_red_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Level Oli</td>
+                        <td className='align-middle'>Cukup (normal)</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadRedOli'
+                            name='crbciHeadRedOli'
+                            className="large-checkbox"
+                            checked={data.crbc1_2_red_oli}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadRedOli_r' name="crbciHeadRedOli_r" placeholder=""
+                          value={data.crbc1_2_red_oli_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_2_red_oli ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Coupling</td>
+                        <td className='align-middle'>Good (no noise)</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadRedCoupling'
+                            name='crbciHeadRedCoupling'
+                            className="large-checkbox"
+                            checked={data.crbc1_2_red_coupling}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciHeadRedCoupling_r' name="crbciHeadRedCoupling_r" placeholder=""
+                          value={data.crbc1_2_red_coupling_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_2_red_coupling ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>3. Snub Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSnubLagging'
+                            name='crbciSnubLagging'
+                            className="large-checkbox"
+                            checked={data.crbc1_3_lagging}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSnubLagging_r' name="crbciSnubLagging_r" placeholder=""
+                          value={data.crbc1_3_lagging_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_3_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSnubUtaraNoise'
+                            name='crbciSnubUtaraNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_3_utara_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSnubUtaraNoise_r' name="crbciSnubUtaraNoise_r" placeholder=""
+                          value={data.crbc1_3_utara_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_3_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciSnubUtaraTemp' name="crbciSnubUtaraTemp" placeholder=""
+                          value={data.crbc1_3_utara_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSnubUtaraTemp_r' name="crbciSnubUtaraTemp_r"placeholder=""
+                          value={data.crbc1_3_utara_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_3_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSnubSelNoise'
+                            name='crbciSnubSelNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_3_sel_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSnubSelNoise_r' name="crbciSnubSelNoise_r" placeholder=""
+                          value={data.crbc1_3_sel_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_3_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciSnubSelTemp' name="crbciSnubSelTemp" placeholder=""
+                          value={data.crbc1_3_sel_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSnubSelTemp_r' name="crbciSnubSelTemp_r"placeholder=""
+                          value={data.crbc1_3_sel_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_3_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>4. Bend Pulley Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciBaratLagging'
+                            name='crbciBaratLagging'
+                            className="large-checkbox"
+                            checked={data.crbc1_4_lagging}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciBaratLagging_r' name="crbciBaratLagging_r" placeholder=""
+                          value={data.crbc1_4_lagging_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_4_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciBaratUtaraNoise'
+                            name='crbciBaratUtaraNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_4_utara_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciBaratUtaraNoise_r' name="crbciBaratUtaraNoise_r" placeholder=""
+                          value={data.crbc1_4_utara_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_4_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciBaratUtaraTemp' name="crbciBaratUtaraTemp" placeholder=""
+                          value={data.crbc1_4_utara_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciBaratUtaraTemp_r' name="crbciBaratUtaraTemp_r"placeholder=""
+                          value={data.crbc1_4_utara_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_4_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciBaratSelatanNoise'
+                            name='crbciBaratSelatanNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_4_sel_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciBaratSelatanNoise_r' name="crbciBaratSelatanNoise_r" placeholder=""
+                          value={data.crbc1_4_sel_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_4_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciBaratSelatanTemp' name="crbciBaratSelatanTemp" placeholder=""
+                          value={data.crbc1_4_sel_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciBaratSelatanTemp_r' name="crbc1_4_sel_temp_rm"placeholder=""
+                          value={data.rebc1_4_timur_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_4_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>5. Bend Pulley Timur</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTimurLagging'
+                            name='crbciTimurLagging'
+                            className="large-checkbox"
+                            checked={data.crbc1_5_lagging}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTimurLagging_r' name="crbciTimurLagging_r" placeholder=""
+                          value={data.crbc1_5_lagging_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_5_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTimurUtaraNoise'
+                            name='crbciTimurUtaraNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_5_utara_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTimurUtaraNoise_r' name="crbciTimurUtaraNoise_r" placeholder=""
+                          value={data.crbc1_5_utara_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_5_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciTimurUtaraTemp' name="crbciTimurUtaraTemp" placeholder=""
+                          value={data.crbc1_5_utara_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTimurUtaraTemp_r' name="crbciTimurUtaraTemp_r"placeholder=""
+                          value={data.crbc1_5_utara_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_5_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTimurSelatanNoise'
+                            name='crbciTimurSelatanNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_5_sel_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTimurSelatanNoise_r' name="crbciTimurSelatanNoise_r" placeholder=""
+                          value={data.crbc1_5_sel_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_5_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciTimurSelatanTemp' name="crbciTimurSelatanTemp" placeholder=""
+                          value={data.crbc1_5_sel_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTimurSelatanTemp_r' name="crbciTimurSelatanTemp_r"placeholder=""
+                          value={data.crbc1_5_sel_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_5_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>6. Take Up Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTakeLagging'
+                            name='crbciTakeLagging'
+                            className="large-checkbox"
+                            checked={data.crbc1_6_lagging}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTakeLagging_r' name="crbciTakeLagging_r" placeholder=""
+                          value={data.crbc1_6_lagging_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_6_lagging_rm ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTakeUtaraNoise'
+                            name='crbciTakeUtaraNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_6_utara_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTakeUtaraNoise_r' name="crbciTakeUtaraNoise_r" placeholder=""
+                          value={data.crbc1_6_utara_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_6_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciTakeUtaraTemp' name="crbciTakeUtaraTemp" placeholder=""
+                          value={data.crbc1_6_utara_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTakeUtaraTemp_r' name="crbciTakeUtaraTemp_r"placeholder=""
+                          value={data.crbc1_6_utara_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_6_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTakeSelNoise'
+                            name='crbciTakeSelNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_6_sel_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTakeSelNoise_r' name="crbciTakeSelNoise_r" placeholder=""
+                          value={data.crbc1_6_sel_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_6_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciTakeSelTemp' name="crbciTakeSelTemp" placeholder=""
+                          value={data.crbc1_6_sel_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTakeSelTemp_r' name="crbciTakeSelTemp_r"placeholder=""
+                          value={data.crbc1_6_sel_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_6_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>7. Tail Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTailLagging'
+                            name='crbciTailLagging'
+                            className="large-checkbox"
+                            checked={data.crbc1_7_lagging}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTailLagging_r' name="rebciTaicrbciTailLagging_rlLagging_r" placeholder=""
+                          value={data.crbc1_7_lagging_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_7_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>V Scrapper</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTailVs'
+                            name='crbciTailVs'
+                            className="large-checkbox"
+                            checked={data.crbc1_7_vs}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTailVs_r' name="crbciTailVs_r" placeholder=""
+                          value={data.crbc1_7_vs_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_7_vs ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTailUtaraNoise'
+                            name='crbciTailUtaraNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_7_utara_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTailUtaraNoise_r' name="crbciTailUtaraNoise_r" placeholder=""
+                          value={data.crbc1_7_utara_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_7_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciTailUtaraTemp' name="crbciTailUtaraTemp" placeholder=""
+                          value={data.crbc1_7_utara_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTailUtaraTemp_r' name="crbciTailUtaraTemp_r"placeholder=""
+                          value={data.crbc1_7_utara_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_7_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTailSelNoise'
+                            name='crbciTailSelNoise'
+                            className="large-checkbox"
+                            checked={data.crbc1_7_sel_noise}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTailSelNoise_r' name="crbciTailSelNoise_r" placeholder=""
+                          value={data.crbc1_7_sel_noise_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_7_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="number" id='crbciTailSelTemp' name="crbciTailSelTemp" placeholder=""
+                          value={data.crbc1_7_sel_temp}
+                        /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciTailSelTemp_r' name="crbciTailSelTemp_r"placeholder=""
+                          value={data.crbc1_7_sel_temp_rm}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_7_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>8. Belt Conveyor</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Skirt</td>
+                        <td className='align-middle'>No wear and No leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSkirt'
+                            name='crbciSkirt'
+                            className="large-checkbox"
+                            checked={data.crbc1_8_skirt}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciSkirt_r' name="crbciSkirt_r" placeholder=""
+                          value={data.crbc1_8_skirt_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_8_skirt ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Inlet Chute</td>
+                        <td className='align-middle'>No wear and No leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciChute'
+                            name='crbciChute'
+                            className="large-checkbox"
+                            checked={data.crbc1_8_chute}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciChute_r' name="crbciChute_r" placeholder=""
+                          value={data.crbc1_8_chute_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_8_chute ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Belt Condition</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciCondition'
+                            name='crbciCondition'
+                            className="large-checkbox"
+                            checked={data.crbc1_8_condition}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciCondition_r' name="crbciCondition_r" placeholder=""
+                          value={data.crbc1_8_condition_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_8_condition ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Belt Joint</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciJoint'
+                            name='crbciJoint'
+                            className="large-checkbox"
+                            checked={data.crbc1_8_joint}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciJoint_r' name="crbciJoint_r" placeholder=""
+                          value={data.crbc1_8_joint_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_8_joint ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Impact Roller</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciImpact'
+                            name='crbciImpact'
+                            className="large-checkbox"
+                            checked={data.crbc1_8_impact}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciImpact_r' name="crbciImpact_r" placeholder=""
+                          value={data.crbc1_8_impact_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_8_impact ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Carry Roller</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciCarry'
+                            name='crbciCarry'
+                            className="large-checkbox"
+                            checked={data.crbc1_8_carry}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciCarry_r' name="crbciCarry_r" placeholder=""
+                          value={data.crbc1_8_carry_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_8_carry ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Return Roller</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciReturn'
+                            name='crbciReturn'
+                            className="large-checkbox"
+                            checked={data.crbc1_8_return}
+                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '65px' }} type="text" id='crbciReturn_r' name="crbciReturn_r" placeholder=""
+                          value={data.crbc1_8_return_rm}
+                        /></td>
+                        <td className='align-middle'><b>{data.crbc1_8_return ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
                     </tbody>
                   </Table>
                 </Form>

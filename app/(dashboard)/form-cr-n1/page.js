@@ -134,6 +134,107 @@ const N1 = () => {
   const [hci9cesing, sethci9cesing] = useState('');
   const [hci9cesing_r, sethci9cesing_r] = useState('');
 
+  //BC1
+  const [crbciSgRotatingParts, setcrbciSgRotatingParts] = useState('');
+  const [crbciSgRotatingParts_r, setcrbciSgRotatingParts_r] = useState('');
+  const [crbciSgHSC, setcrbciSgHSC] = useState('');
+  const [crbciSgHSC_r, setcrbciSgHSC_r] = useState('');
+  const [crbciSgLSC, setcrbciSgLSC] = useState('');
+  const [crbciSgLSC_r, setcrbciSgLSC_r] = useState('');
+  const [crbciSgCSB, setcrbciSgCSB] = useState('');
+  const [crbciSgCSB_r, setcrbciSgCSB_r] = useState('');
+  const [crbciSgRG, setcrbciSgRG] = useState('');
+  const [crbciSgRG_r, setcrbciSgRG_r] = useState('');
+  const [crbciHeadLagging, setcrbciHeadLagging] = useState('');
+  const [crbciHeadLagging_r, setcrbciHeadLagging_r] = useState('');
+  const [crbciHeadPrimary, setcrbciHeadPrimary] = useState('');
+  const [crbciHeadPrimary_r, setcrbciHeadPrimary_r] = useState('');
+  const [crbciHeadSecondary, setcrbciHeadSecondary] = useState('');
+  const [crbciHeadSecondary_r, setcrbciHeadSecondary_r] = useState('');
+  const [crbciHeadFixNoise, setcrbciHeadFixNoise] = useState('');
+  const [crbciHeadFixNoise_r, setcrbciHeadFixNoise_r] = useState('');
+  const [crbciHeadFixTemp, setcrbciHeadFixTemp] = useState('');
+  const [crbciHeadFixTemp_r, setcrbciHeadFixTemp_r] = useState('');
+  const [crbciHeadFreeNoise, setcrbciHeadFreeNoise] = useState('');
+  const [crbciHeadFreeNoise_r, setcrbciHeadFreeNoise_r] = useState('');
+  const [crbciHeadFreeTemp, setcrbciHeadFreeTemp] = useState('');
+  const [crbciHeadFreeTemp_r, setcrbciHeadFreeTemp_r] = useState('');
+  const [crbciHeadRedNoise, setcrbciHeadRedNoise] = useState('');
+  const [crbciHeadRedNoise_r, setcrbciHeadRedNoise_r] = useState('');
+  const [crbciHeadRedTemp, setcrbciHeadRedTemp] = useState('');
+  const [crbciHeadRedTemp_r, setcrbciHeadRedTemp_r] = useState('');
+  const [crbciHeadRedSeal, setcrbciHeadRedSeal] = useState('');
+  const [crbciHeadRedSeal_r, setcrbciHeadRedSeal_r] = useState('');
+  const [crbciHeadRedOli, setcrbciHeadRedOli] = useState('');
+  const [crbciHeadRedOli_r, setcrbciHeadRedOli_r] = useState('');
+  const [crbciHeadRedCoupling, setcrbciHeadRedCoupling] = useState('');
+  const [crbciHeadRedCoupling_r, setcrbciHeadRedCoupling_r] = useState('');
+  const [crbciSnubLagging, setcrbciSnubLagging] = useState('');
+  const [crbciSnubLagging_r, setcrbciSnubLagging_r] = useState('');
+  const [crbciSnubUtaraNoise, setcrbciSnubUtaraNoise] = useState('');
+  const [crbciSnubUtaraNoise_r, setcrbciSnubUtaraNoise_r] = useState('');
+  const [crbciSnubUtaraTemp, setcrbciSnubUtaraTemp] = useState('');
+  const [crbciSnubUtaraTemp_r, setcrbciSnubUtaraTemp_r] = useState('');
+  const [crbciSnubSelNoise, setcrbciSnubSelNoise] = useState('');
+  const [crbciSnubSelNoise_r, setcrbciSnubSelNoise_r] = useState('');
+  const [crbciSnubSelTemp, setcrbciSnubSelTemp] = useState('');
+  const [crbciSnubSelTemp_r, setcrbciSnubSelTemp_r] = useState('');
+  const [crbciBaratLagging, setcrbciBaratLagging] = useState('');``
+  const [crbciBaratLagging_r, setcrbciBaratLagging_r] = useState('');
+  const [crbciBaratUtaraNoise, setcrbciBaratUtaraNoise] = useState('');
+  const [crbciBaratUtaraNoise_r, setcrbciBaratUtaraNoise_r] = useState('');
+  const [crbciBaratUtaraTemp, setcrbciBaratUtaraTemp] = useState('');
+  const [crbciBaratUtaraTemp_r, setcrbciBaratUtaraTemp_r] = useState('');
+  const [crbciBaratSelatanNoise, setcrbciBaratSelatanNoise] = useState('');
+  const [crbciBaratSelatanNoise_r, setcrbciBaratSelatanNoise_r] = useState('');
+  const [crbciBaratSelatanTemp, setcrbciBaratSelatanTemp] = useState('');
+  const [crbciBaratSelatanTemp_r, setcrbciBaratSelatanTemp_r] = useState('');
+  const [crbciTimurLagging, setcrbciTimurLagging] = useState('');
+  const [crbciTimurLagging_r, setcrbciTimurLagging_r] = useState('');
+  const [crbciTimurUtaraNoise, setcrbciTimurUtaraNoise] = useState('');
+  const [crbciTimurUtaraNoise_r, setcrbciTimurUtaraNoise_r] = useState('');
+  const [crbciTimurUtaraTemp, setcrbciTimurUtaraTemp] = useState('');
+  const [crbciTimurUtaraTemp_r, setcrbciTimurUtaraTemp_r] = useState('');
+  const [crbciTimurSelatanNoise, setcrbciTimurSelatanNoise] = useState('');
+  const [crbciTimurSelatanNoise_r, setcrbciTimurSelatanNoise_r] = useState('');
+  const [crbciTimurSelatanTemp, setcrbciTimurSelatanTemp] = useState('');
+  const [crbciTimurSelatanTemp_r, setcrbciTimurSelatanTemp_r] = useState('');
+  const [crbciTakeLagging, setcrbciTakeLagging] = useState('');
+  const [crbciTakeLagging_r, setcrbciTakeLagging_r] = useState('');
+  const [crbciTakeUtaraNoise, setcrbciTakeUtaraNoise] = useState('');
+  const [crbciTakeUtaraNoise_r, setcrbciTakeUtaraNoise_r] = useState('');
+  const [crbciTakeUtaraTemp, setcrbciTakeUtaraTemp] = useState('');
+  const [crbciTakeUtaraTemp_r, setcrbciTakeUtaraTemp_r] = useState('');
+  const [crbciTakeSelNoise, setcrbciTakeSelNoise] = useState('');
+  const [crbciTakeSelNoise_r, setcrbciTakeSelNoise_r] = useState('');
+  const [crbciTakeSelTemp, setcrbciTakeSelTemp] = useState('');
+  const [crbciTakeSelTemp_r, setcrbciTakeSelTemp_r] = useState('');
+  const [crbciTailLagging, setcrbciTailLagging] = useState('');
+  const [crbciTailLagging_r, setcrbciTailLagging_r] = useState('');
+  const [crbciTailVs, setcrbciTailVs] = useState('');
+  const [crbciTailVs_r, setcrbciTailVs_r] = useState('');
+  const [crbciTailUtaraNoise, setcrbciTailUtaraNoise] = useState('');
+  const [crbciTailUtaraNoise_r, setcrbciTailUtaraNoise_r] = useState('');
+  const [crbciTailUtaraTemp, setcrbciTailUtaraTemp] = useState('');
+  const [crbciTailUtaraTemp_r, setcrbciTailUtaraTemp_r] = useState('');
+  const [crbciTailSelNoise, setcrbciTailSelNoise] = useState('');
+  const [crbciTailSelNoise_r, setcrbciTailSelNoise_r] = useState('');
+  const [crbciTailSelTemp, setcrbciTailSelTemp] = useState('');
+  const [crbciTailSelTemp_r, setcrbciTailSelTemp_r] = useState('');
+  const [crbciSkirt, setcrbciSkirt] = useState('');
+  const [crbciSkirt_r, setcrbciSkirt_r] = useState('');
+  const [crbciChute, setcrbciChute] = useState('');
+  const [crbciChute_r, setcrbciChute_r] = useState('');
+  const [crbciCondition, setcrbciCondition] = useState('');
+  const [crbciCondition_r, setcrbciCondition_r] = useState('');
+  const [crbciJoint, setcrbciJoint] = useState('');
+  const [crbciJoint_r, setcrbciJoint_r] = useState('');
+  const [crbciImpact, setcrbciImpact] = useState('');
+  const [crbciImpact_r, setcrbciImpact_r] = useState('');
+  const [crbciCarry, setcrbciCarry] = useState('');
+  const [crbciCarry_r, setcrbciCarry_r] = useState('');
+  const [crbciReturn, setcrbciReturn] = useState('');
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -242,6 +343,107 @@ const N1 = () => {
         hc1_8_temp_rm: hci8temp_r,
         hc1_9_cleanliness: hci9cesing,
         hc1_9_cleanliness_rm: hci9cesing_r,
+
+        // 213-BC1
+        crbc1_1_rotating_part: crbciSgRotatingParts, 
+        crbc1_1_rotating_part_rm: crbciSgRotatingParts_r,
+        crbc1_1_hsc: crbciSgHSC,
+        crbc1_1_hsc_rm: crbciSgHSC_r,
+        crbc1_1_lsc: crbciSgLSC,
+        crbc1_1_lsc_rm: crbciSgLSC_r,
+        crbc1_1_csb: crbciSgCSB,
+        crbc1_1_csb_rm: crbciSgCSB_r,
+        crbc1_1_remaining_guarding: crbciSgRG,
+        crbc1_1_remaining_guarding_rm: crbciSgRG_r,
+        crbc1_2_lagging: crbciHeadLagging,
+        crbc1_2_lagging_rm: crbciHeadLagging_r,
+        crbc1_2_primary: crbciHeadPrimary,
+        crbc1_2_primary_rm: crbciHeadPrimary_r,
+        crbc1_2_secondary: crbciHeadSecondary,
+        crbc1_2_secondary_rm: crbciHeadSecondary_r,
+        crbc1_2_fix_noise: crbciHeadFixNoise,
+        crbc1_2_fix_noise_rm: crbciHeadFixNoise_r,
+        crbc1_2_fix_temp: crbciHeadFixTemp,
+        crbc1_2_fix_temp_rm: crbciHeadFixTemp_r,
+        crbc1_2_free_noise: crbciHeadFreeNoise,
+        crbc1_2_free_noise_rm: crbciHeadFreeNoise_r,
+        crbc1_2_free_temp: crbciHeadFreeTemp,
+        crbc1_2_free_temp_rm: crbciHeadFreeTemp_r,
+        crbc1_2_red_noise: crbciHeadRedNoise,
+        crbc1_2_red_noise_rm: crbciHeadRedNoise_r,
+        crbc1_2_red_temp: crbciHeadRedTemp,
+        crbc1_2_red_temp_rm: crbciHeadRedTemp_r,
+        crbc1_2_red_seal: crbciHeadRedSeal,
+        crbc1_2_red_seal_rm: crbciHeadRedSeal_r,
+        crbc1_2_red_oli: crbciHeadRedOli,
+        crbc1_2_red_oli_rm: crbciHeadRedOli_r,
+        crbc1_2_red_coupling: crbciHeadRedCoupling,
+        crbc1_2_red_coupling_rm: crbciHeadRedCoupling_r,
+        crbc1_3_lagging: crbciSnubLagging,
+        crbc1_3_lagging_rm: crbciSnubLagging_r,
+        crbc1_3_utara_noise: crbciSnubUtaraNoise,
+        crbc1_3_utara_noise_rm: crbciSnubUtaraNoise_r,
+        crbc1_3_utara_temp: crbciSnubUtaraTemp,
+        crbc1_3_utara_temp_rm: crbciSnubUtaraTemp_r,
+        crbc1_3_sel_noise: crbciSnubSelNoise,
+        crbc1_3_sel_noise_rm: crbciSnubSelNoise_r,
+        crbc1_3_sel_temp: crbciSnubSelTemp,
+        crbc1_3_sel_temp_rm: crbciSnubSelTemp_r,
+        crbc1_4_lagging: crbciBaratLagging,
+        crbc1_4_lagging_rm: crbciBaratLagging_r,
+        crbc1_4_utara_noise: crbciBaratUtaraNoise,
+        crbc1_4_utara_noise_rm: crbciBaratUtaraNoise_r,
+        crbc1_4_utara_temp: crbciBaratUtaraTemp,
+        crbc1_4_utara_temp_rm: crbciBaratUtaraTemp_r,
+        crbc1_4_sel_noise: crbciBaratSelatanNoise,
+        crbc1_4_sel_noise_rm: crbciBaratSelatanNoise_r,
+        crbc1_4_sel_temp: crbciBaratSelatanTemp,
+        crbc1_4_sel_temp_rm: crbciBaratSelatanTemp_r,
+        crbc1_5_lagging: crbciTimurLagging,
+        crbc1_5_lagging_rm: crbciTimurLagging_r,
+        crbc1_5_utara_noise: crbciTimurUtaraNoise,
+        crbc1_5_utara_noise_rm: crbciTimurUtaraNoise_r,
+        crbc1_5_utara_temp: crbciTimurUtaraTemp,
+        crbc1_5_utara_temp_rm: crbciTimurUtaraTemp_r,
+        crbc1_5_sel_noise: crbciTimurSelatanNoise,
+        crbc1_5_sel_noise_rm: crbciTimurSelatanNoise_r,
+        crbc1_5_sel_temp: crbciTimurSelatanTemp,
+        crbc1_5_sel_temp_rm: crbciTimurSelatanTemp_r,
+        crbc1_6_lagging: crbciTakeLagging,
+        crbc1_6_lagging_rm: crbciTakeLagging_r,
+        crbc1_6_utara_noise: crbciTakeUtaraNoise,
+        crbc1_6_utara_noise_rm: crbciTakeUtaraNoise_r,
+        crbc1_6_utara_temp: crbciTakeUtaraTemp,
+        crbc1_6_utara_temp_rm: crbciTakeUtaraTemp_r,
+        crbc1_6_sel_noise: crbciTakeSelNoise,
+        crbc1_6_sel_noise_rm: crbciTakeSelNoise_r,
+        crbc1_6_sel_temp: crbciTakeSelTemp,
+        crbc1_6_sel_temp_rm: crbciTakeSelTemp_r,
+        crbc1_7_lagging: crbciTailLagging,
+        crbc1_7_lagging_rm: crbciTailLagging_r,
+        crbc1_7_vs: crbciTailVs,
+        crbc1_7_vs_rm: crbciTailVs_r,
+        crbc1_7_utara_noise: crbciTailUtaraNoise,
+        crbc1_7_utara_noise_rm: crbciTailUtaraNoise_r,
+        crbc1_7_utara_temp: crbciTailUtaraTemp,
+        crbc1_7_utara_temp_rm: crbciTailUtaraTemp_r,
+        crbc1_7_sel_noise: crbciTailSelNoise,
+        crbc1_7_sel_noise_rm: crbciTailSelNoise_r,
+        crbc1_7_sel_temp: crbciTailSelTemp,
+        crbc1_7_sel_temp_rm: crbciTailSelTemp_r,
+        crbc1_8_skirt: crbciSkirt,
+        crbc1_8_skirt_rm: crbciSkirt_r,
+        crbc1_8_chute: crbciChute,
+        crbc1_8_chute_rm: crbciChute_r,
+        crbc1_8_condition: crbciCondition,
+        crbc1_8_condition_rm: crbciCondition_r,
+        crbc1_8_joint: crbciJoint,
+        crbc1_8_joint_rm: crbciJoint_r,
+        crbc1_8_impact: crbciImpact,
+        crbc1_8_impact_rm: crbciImpact_r,
+        crbc1_8_carry: crbciCarry,
+        crbc1_8_carry_rm: crbciCarry_r,
+        crbc1_8_return: crbciReturn,
       }),
     });
 
@@ -1216,6 +1418,969 @@ const N1 = () => {
                           /></td>
                       </tr>
                       {/* END HC1 */}
+
+                       {/* BC1 */}
+                       <tr>
+                        <td rowSpan={73} className='text-center align-middle'>
+                          <span>3</span>
+                        </td>
+                        <td rowSpan={73} className='text-center align-middle rotate-text'>
+                          <b>NR.213-BC1</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>1. Safety Guard</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rotating Parts</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSgRotatingParts'
+                            name='crbciSgRotatingParts'
+                            className="large-checkbox"
+                            checked={crbciSgRotatingParts}
+                            onChange={(e) => setcrbciSgRotatingParts(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSgRotatingParts_r' name="crbciSgRotatingParts_r" placeholder="" 
+                          value={crbciSgRotatingParts_r}
+                          onChange={(e) => setcrbciSgRotatingParts_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>High Speed Cover</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSgHSC'
+                            name='crbciSgHSC'
+                            className="large-checkbox"
+                            checked={crbciSgHSC}
+                            onChange={(e) => setcrbciSgHSC(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSgHSC_r' name="crbciSgHSC_r" placeholder="" 
+                          value={crbciSgHSC_r}
+                          onChange={(e) => setcrbciSgHSC_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Low Speed Cover</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSgLSC'
+                            name='crbciSgLSC'
+                            className="large-checkbox"
+                            checked={crbciSgLSC}
+                            onChange={(e) => setcrbciSgLSC(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSgLSC_r' name="crbciSgLSC_r" placeholder="" 
+                          value={crbciSgLSC_r}
+                          onChange={(e) => setcrbciSgLSC_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Cover Sepanjang Belt</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSgCSB'
+                            name='crbciSgCSB'
+                            className="large-checkbox"
+                            checked={crbciSgCSB}
+                            onChange={(e) => setcrbciSgCSB(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSgCSB_r' name="crbciSgCSB_r" placeholder="" 
+                          value={crbciSgCSB_r}
+                          onChange={(e) => setcrbciSgCSB_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Remaining guarding</td>
+                        <td className='align-middle'>All in place and not loose</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSgRG'
+                            name='crbciSgRG'
+                            className="large-checkbox"
+                            checked={crbciSgRG}
+                            onChange={(e) => setcrbciSgRG(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSgRG_r' name="crbciSgRG_r" placeholder="" 
+                          value={crbciSgRG_r}
+                          onChange={(e) => setcrbciSgRG_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>2. Head Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadLagging'
+                            name='crbciHeadLagging'
+                            className="large-checkbox"
+                            checked={crbciHeadLagging}
+                            onChange={(e) => setcrbciHeadLagging(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadLagging_r' name="crbciHeadLagging_r" placeholder="" 
+                          value={crbciHeadLagging_r}
+                          onChange={(e) => setcrbciHeadLagging_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Scrapper Primary</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadPrimary'
+                            name='crbciHeadPrimary'
+                            className="large-checkbox"
+                            checked={crbciHeadPrimary}
+                            onChange={(e) => setcrbciHeadPrimary(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadPrimary_r' name="crbciHeadPrimary_r" placeholder="" 
+                          value={crbciHeadPrimary_r}
+                          onChange={(e) => setcrbciHeadPrimary_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Scrapper Secondary</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadSecondary'
+                            name='crbciHeadSecondary'
+                            className="large-checkbox"
+                            checked={crbciHeadSecondary}
+                            onChange={(e) => setcrbciHeadSecondary(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadSecondary_r' name="crbciHeadSecondary_r" placeholder="" 
+                          value={crbciHeadSecondary_r}
+                          onChange={(e) => setcrbciHeadSecondary_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Fix</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadFixNoise'
+                            name='crbciHeadFixNoise'
+                            className="large-checkbox"
+                            checked={crbciHeadFixNoise}
+                            onChange={(e) => setcrbciHeadFixNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadFixNoise_r' name="crbciHeadFixNoise_r" placeholder="" 
+                          value={crbciHeadFixNoise_r}
+                          onChange={(e) => setcrbciHeadFixNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciHeadFixTemp' name="crbciHeadFixTemp" placeholder="" 
+                          value={crbciHeadFixTemp}
+                          onChange={(e) => setcrbciHeadFixTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadFixTemp_r' name="crbciHeadFixTemp_r" placeholder="" 
+                          value={crbciHeadFixTemp_r}
+                          onChange={(e) => setcrbciHeadFixTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Free</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadFreeNoise'
+                            name='crbciHeadFreeNoise'
+                            className="large-checkbox"
+                            checked={crbciHeadFreeNoise}
+                            onChange={(e) => setcrbciHeadFreeNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadFreeNoise_r' name="crbciHeadFreeNoise_r" placeholder="" 
+                          value={crbciHeadFreeNoise_r}
+                          onChange={(e) => setcrbciHeadFreeNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciHeadFreeTemp' name="crbciHeadFreeTemp" placeholder="" 
+                          value={crbciHeadFreeTemp}
+                          onChange={(e) => setcrbciHeadFreeTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadFreeTemp_r' name="crbciHeadFreeTemp_r" placeholder="" 
+                          value={crbciHeadFreeTemp_r}
+                          onChange={(e) => setcrbciHeadFreeTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Reducer</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadRedNoise'
+                            name='crbciHeadRedNoise'
+                            className="large-checkbox"
+                            checked={crbciHeadRedNoise}
+                            onChange={(e) => setcrbciHeadRedNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadRedNoise_r' name="crbciHeadRedNoise_r" placeholder="" 
+                          value={crbciHeadRedNoise_r}
+                          onChange={(e) => setcrbciHeadRedNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 60⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciHeadRedTemp' name="crbciHeadRedTemp" placeholder="" 
+                          value={crbciHeadRedTemp}
+                          onChange={(e) => setcrbciHeadRedTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadRedTemp_r' name="crbciHeadRedTemp_r" placeholder="" 
+                          value={crbciHeadRedTemp_r}
+                          onChange={(e) => setcrbciHeadRedTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Seal</td>
+                        <td className='align-middle'>No leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadRedSeal'
+                            name='crbciHeadRedSeal'
+                            className="large-checkbox"
+                            checked={crbciHeadRedSeal}
+                            onChange={(e) => setcrbciHeadRedSeal(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadRedSeal_r' name="crbciHeadRedSeal_r" placeholder="" 
+                          value={crbciHeadRedSeal_r}
+                          onChange={(e) => setcrbciHeadRedSeal_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Level oli</td>
+                        <td className='align-middle'>Cukup (Normal)</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadRedOli'
+                            name='crbciHeadRedOli'
+                            className="large-checkbox"
+                            checked={crbciHeadRedOli}
+                            onChange={(e) => setcrbciHeadRedOli(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadRedOli_r' name="crbciHeadRedOli_r" placeholder="" 
+                          value={crbciHeadRedOli_r}
+                          onChange={(e) => setcrbciHeadRedOli_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Coupling</td>
+                        <td className='align-middle'>Good (No Noise)</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciHeadRedCoupling'
+                            name='crbciHeadRedCoupling'
+                            className="large-checkbox"
+                            checked={crbciHeadRedCoupling}
+                            onChange={(e) => setcrbciHeadRedCoupling(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciHeadRedCoupling_r' name="crbciHeadRedCoupling_r" placeholder="" 
+                          value={crbciHeadRedCoupling_r}
+                          onChange={(e) => setcrbciHeadRedCoupling_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>3. Snub Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSnubLagging'
+                            name='crbciSnubLagging'
+                            className="large-checkbox"
+                            checked={crbciSnubLagging}
+                            onChange={(e) => setcrbciSnubLagging(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSnubLagging_r' name="crbciSnubLagging_r" placeholder="" 
+                          value={crbciSnubLagging_r}
+                          onChange={(e) => setcrbciSnubLagging_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSnubUtaraNoise'
+                            name='crbciSnubUtaraNoise'
+                            className="large-checkbox"
+                            checked={crbciSnubUtaraNoise}
+                            onChange={(e) => setcrbciSnubUtaraNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSnubUtaraNoise_r' name="crbciSnubUtaraNoise_r" placeholder="" 
+                          value={crbciSnubUtaraNoise_r}
+                          onChange={(e) => setcrbciSnubUtaraNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciSnubUtaraTemp' name="crbciSnubUtaraTemp" placeholder="" 
+                          value={crbciSnubUtaraTemp}
+                          onChange={(e) => setcrbciSnubUtaraTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSnubUtaraTemp_r' name="crbciSnubUtaraTemp_r" placeholder="" 
+                          value={crbciSnubUtaraTemp_r}
+                          onChange={(e) => setcrbciSnubUtaraTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSnubSelNoise'
+                            name='crbciSnubSelNoise'
+                            className="large-checkbox"
+                            checked={crbciSnubSelNoise}
+                            onChange={(e) => setcrbciSnubSelNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSnubSelNoise_r' name="crbciSnubSelNoise_r" placeholder="" 
+                          value={crbciSnubSelNoise_r}
+                          onChange={(e) => setcrbciSnubSelNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciSnubSelTemp' name="crbciSnubSelTemp" placeholder="" 
+                          value={crbciSnubSelTemp}
+                          onChange={(e) => setcrbciSnubSelTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSnubSelTemp_r' name="crbciSnubSelTemp_r" placeholder="" 
+                          value={crbciSnubSelTemp_r}
+                          onChange={(e) => setcrbciSnubSelTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>4. Bend Pulley Barat</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciBaratLagging'
+                            name='crbciBaratLagging'
+                            className="large-checkbox"
+                            checked={crbciBaratLagging}
+                            onChange={(e) => setcrbciBaratLagging(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciLagging_r' name="crbciBaratLagging_r" placeholder="" 
+                          value={crbciBaratLagging_r}
+                          onChange={(e) => setcrbciBaratLagging_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciBaratUtaraNoise'
+                            name='crbciBaratUtaraNoise'
+                            className="large-checkbox"
+                            checked={crbciBaratUtaraNoise}
+                            onChange={(e) => setcrbciBaratUtaraNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciBaratUtaraNoise_r' name="crbciBaratUtaraNoise_r" placeholder="" 
+                          value={crbciBaratUtaraNoise_r}
+                          onChange={(e) => setcrbciBaratUtaraNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciBaratUtaraTemp' name="crbciBaratUtaraTemp" placeholder="" 
+                          value={crbciBaratUtaraTemp}
+                          onChange={(e) => setcrbciBaratUtaraTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciBaratUtaraTemp_r' name="crbciBaratUtaraTemp_r" placeholder="" 
+                          value={crbciBaratUtaraTemp_r}
+                          onChange={(e) => setcrbciBaratUtaraTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciBaratSelatanNoise'
+                            name='crbciBaratSelatanNoise'
+                            className="large-checkbox"
+                            checked={crbciBaratSelatanNoise}
+                            onChange={(e) => setcrbciBaratSelatanNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciBaratSelatanNoise_r' name="crbciBaratSelatanNoise_r" placeholder="" 
+                          value={crbciBaratSelatanNoise_r}
+                          onChange={(e) => setcrbciBaratSelatanNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciBaratSelatanTemp' name="crbciBaratSelatanTemp" placeholder="" 
+                          value={crbciBaratSelatanTemp}
+                          onChange={(e) => setcrbciBaratSelatanTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciBaratSelatanTemp_r' name="crbciBaratSelatanTemp_r" placeholder="" 
+                          value={crbciBaratSelatanTemp_r}
+                          onChange={(e) => setcrbciBaratSelatanTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>5. Bend Pulley Timur</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTimurLagging'
+                            name='crbciTimurLagging'
+                            className="large-checkbox"
+                            checked={crbciTimurLagging}
+                            onChange={(e) => setcrbciTimurLagging(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTimurLagging_r' name="crbciTimurLagging_r" placeholder="" 
+                          value={crbciTimurLagging_r}
+                          onChange={(e) => setcrbciTimurLagging_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTimurUtaraNoise'
+                            name='crbciTimurUtaraNoise'
+                            className="large-checkbox"
+                            checked={crbciTimurUtaraNoise}
+                            onChange={(e) => setcrbciTimurUtaraNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTimurUtaraNoise_r' name="crbciTimurUtaraNoise_r" placeholder="" 
+                          value={crbciTimurUtaraNoise_r}
+                          onChange={(e) => setcrbciTimurUtaraNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciTimurUtaraTemp' name="crbciTimurUtaraTemp" placeholder="" 
+                          value={crbciTimurUtaraTemp}
+                          onChange={(e) => setcrbciTimurUtaraTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTimurUtaraTemp_r' name="crbciTimurUtaraTemp_r" placeholder="" 
+                          value={crbciTimurUtaraTemp_r}
+                          onChange={(e) => setcrbciTimurUtaraTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTimurSelatanNoise'
+                            name='crbciTimurSelatanNoise'
+                            className="large-checkbox"
+                            checked={crbciTimurSelatanNoise}
+                            onChange={(e) => setcrbciTimurSelatanNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTimurSelatanNoise_r' name="crbciTimurSelatanNoise_r" placeholder="" 
+                          value={crbciTimurSelatanNoise_r}
+                          onChange={(e) => setcrbciTimurSelatanNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciTimurSelatanTemp' name="crbciTimurSelatanTemp" placeholder="" 
+                          value={crbciTimurSelatanTemp}
+                          onChange={(e) => setcrbciTimurSelatanTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTimurSelatanTemp_r' name="crbciTimurSelatanTemp_r" placeholder="" 
+                          value={crbciTimurSelatanTemp_r}
+                          onChange={(e) => setcrbciTimurSelatanTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>6. Take Up Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTakeLagging'
+                            name='crbciTakeLagging'
+                            className="large-checkbox"
+                            checked={crbciTakeLagging}
+                            onChange={(e) => setcrbciTakeLagging(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTakeLagging_r' name="crbciTakeLagging_r" placeholder="" 
+                          value={crbciTakeLagging_r}
+                          onChange={(e) => setcrbciTakeLagging_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTakeUtaraNoise'
+                            name='crbciTakeUtaraNoise'
+                            className="large-checkbox"
+                            checked={crbciTakeUtaraNoise}
+                            onChange={(e) => setcrbciTakeUtaraNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTakeUtaraNoise_r' name="crbciTakeUtaraNoise_r" placeholder="" 
+                          value={crbciTakeUtaraNoise_r}
+                          onChange={(e) => setcrbciTakeUtaraNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciTakeUtaraTemp' name="crbciTakeUtaraTemp" placeholder="" 
+                          value={crbciTakeUtaraTemp}
+                          onChange={(e) => setcrbciTakeUtaraTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTakeUtaraTemp_r' name="crbciTakeUtaraTemp_r" placeholder="" 
+                          value={crbciTakeUtaraTemp_r}
+                          onChange={(e) => setcrbciTakeUtaraTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTakeSelNoise'
+                            name='crbciTakeSelNoise'
+                            className="large-checkbox"
+                            checked={crbciTakeSelNoise}
+                            onChange={(e) => setcrbciTakeSelNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTakeSelNoise_r' name="crbciTakeSelNoise_r" placeholder="" 
+                          value={crbciTakeSelNoise_r}
+                          onChange={(e) => setcrbciTakeSelNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciTakeSelTemp' name="crbciTakeSelTemp" placeholder="" 
+                          value={crbciTakeSelTemp}
+                          onChange={(e) => setcrbciTakeSelTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTakeSelTemp_r' name="crbciTakeSelTemp_r" placeholder="" 
+                          value={crbciTakeSelTemp_r}
+                          onChange={(e) => setcrbciTakeSelTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>7. Tail Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTailLagging'
+                            name='crbciTailLagging'
+                            className="large-checkbox"
+                            checked={crbciTailLagging}
+                            onChange={(e) => setcrbciTailLagging(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTailLagging_r' name="crbciTailLagging_r" placeholder="" 
+                          value={crbciTailLagging_r}
+                          onChange={(e) => setcrbciTailLagging_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>V Scrapper</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTailVs'
+                            name='crbciTailVs'
+                            className="large-checkbox"
+                            checked={crbciTailVs}
+                            onChange={(e) => setcrbciTailVs(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTailVs_r' name="crbciTailVs_r" placeholder="" 
+                          value={crbciTailVs_r}
+                          onChange={(e) => setcrbciTailVs_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTailUtaraNoise'
+                            name='crbciTailUtaraNoise'
+                            className="large-checkbox"
+                            checked={crbciTailUtaraNoise}
+                            onChange={(e) => setcrbciTailUtaraNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTailUtaraNoise_r' name="crbciTailUtaraNoise_r" placeholder="" 
+                          value={crbciTailUtaraNoise_r}
+                          onChange={(e) => setcrbciTailUtaraNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciTailUtaraTemp' name="crbciTailUtaraTemp" placeholder="" 
+                          value={crbciTailUtaraTemp}
+                          onChange={(e) => setcrbciTailUtaraTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTailUtaraTemp_r' name="crbciTailUtaraTemp_r" placeholder="" 
+                          value={crbciTailUtaraTemp_r}
+                          onChange={(e) => setcrbciTailUtaraTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciTailSelNoise'
+                            name='crbciTailSelNoise'
+                            className="large-checkbox"
+                            checked={crbciTailSelNoise}
+                            onChange={(e) => setcrbciTailSelNoise(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTailSelNoise_r' name="crbciTailSelNoise_r" placeholder="" 
+                          value={crbciTailSelNoise_r}
+                          onChange={(e) => setcrbciTailSelNoise_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="number" id='crbciTailSelTemp' name="crbciTailSelTemp" placeholder="" 
+                          value={crbciTailSelTemp}
+                          onChange={(e) => setcrbciTailSelTemp(e.target.value)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciTailSelTemp_r' name="crbciTailSelTemp_r" placeholder="" 
+                          value={crbciTailSelTemp_r}
+                          onChange={(e) => setcrbciTailSelTemp_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>8. Belt Conveyor</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Skirt</td>
+                        <td className='align-middle'>No wear and no leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciSkirt'
+                            name='crbciSkirt'
+                            className="large-checkbox"
+                            checked={crbciSkirt}
+                            onChange={(e) => setcrbciSkirt(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciSkirt_r' name="crbciSkirt_r" placeholder="" 
+                          value={crbciSkirt_r}
+                          onChange={(e) => setcrbciSkirt_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Inlet Chute</td>
+                        <td className='align-middle'>No wear and no leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciChute'
+                            name='crbciChute'
+                            className="large-checkbox"
+                            checked={crbciChute}
+                            onChange={(e) => setcrbciChute(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciChute_r' name="crbciChute_r" placeholder="" 
+                          value={crbciChute_r}
+                          onChange={(e) => setcrbciChute_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Belt Condition</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciCondition'
+                            name='crbciCondition'
+                            className="large-checkbox"
+                            checked={crbciCondition}
+                            onChange={(e) => setcrbciCondition(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciCondition_r' name="crbciCondition_r" placeholder="" 
+                          value={crbciCondition_r}
+                          onChange={(e) => setcrbciCondition_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Belt Joint</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciJoint'
+                            name='crbciJoint'
+                            className="large-checkbox"
+                            checked={crbciJoint}
+                            onChange={(e) => setcrbciJoint(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciJoint_r' name="crbciJoint_r" placeholder="" 
+                          value={crbciJoint_r}
+                          onChange={(e) => setcrbciJoint_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Impact Roller</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciImpact'
+                            name='crbciImpact'
+                            className="large-checkbox"
+                            checked={crbciImpact}
+                            onChange={(e) => setcrbciImpact(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciImpact_r' name="crbciImpact_r" placeholder="" 
+                          value={crbciImpact_r}
+                          onChange={(e) => setcrbciImpact_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Carry Roller</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciCarry'
+                            name='crbciCarry'
+                            className="large-checkbox"
+                            checked={crbciCarry}
+                            onChange={(e) => setcrbciCarry(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciCarry_r' name="crbciCarry_r" placeholder="" 
+                          value={crbciCarry_r}
+                          onChange={(e) => setcrbciCarry_r(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Return Roller</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciReturn'
+                            name='crbciReturn'
+                            className="large-checkbox"
+                            checked={crbciReturn}
+                            onChange={(e) => setcrbciReturn(e.target.checked)}
+                          /></td>
+                        <td className='p-0'><Form.Control 
+                          style={{ height: '65px'}} type="text" id='crbciReturn' name="crbciReturn" placeholder="" 
+                          value={crbciReturn}
+                          onChange={(e) => setcrbciReturn(e.target.value)}
+                          /></td>
+                      </tr>
                     </tbody>
                   </Table>
                   <div className='mt-5'>

@@ -36,6 +36,12 @@ export const DashboardMenu = [
 		icon: 'layout',
 		link: '/route'
 	},
+	{
+		id: uuid(),
+		title: 'Log in',
+		icon: 'log-in',
+		link: '/authentication/sign-in'
+	},
 ];
 
 export default DashboardMenu;

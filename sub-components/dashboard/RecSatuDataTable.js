@@ -50,7 +50,7 @@ const RecSatuDataTable = () => {
     fetchListRecSatu();
   }, []);
 
-  const searchNarSatu = (e) => {
+  const searchRecSatu = (e) => {
     const text = e.target.value.toLowerCase();
     setSearchQuery(text);
     const filtered = text === "" ? listData : listData.filter(
@@ -116,8 +116,8 @@ const RecSatuDataTable = () => {
     },
   ]
 
-  const handleButtonClick = (nar1Id) => {
-    router.push(`/details/nar1/${nar1Id}`);
+  const handleButtonClick = (rec1Id) => {
+    router.push(`/details/rec1/${rec1Id}`);
   };
 
   return (
@@ -130,7 +130,7 @@ const RecSatuDataTable = () => {
               <Form className="d-flex align-items-center">
                 <Form.Control type="text" placeholder="Search" className="ml-3" 
                   value={searchQuery}
-                  onChange={searchNarSatu}
+                  onChange={searchRecSatu}
                 />
               </Form>
             </Card.Header>

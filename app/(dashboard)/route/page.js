@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Col, Row, Container } from 'react-bootstrap';
 import { Fragment } from "react";
 import { PricingCard } from 'widgets'
-import { n1, n2, reclaimer } from 'data/pricing/PricingPlansData';
+import { n1, reclaimer } from 'data/pricing/PricingPlansData';
 
 const Route = () => {
   return (
@@ -30,9 +30,6 @@ const Route = () => {
             </Col>
             <Col xl={4} lg={6} md={12} xs={12} className="mb-3">
               <PricingCard content={reclaimer} />
-            </Col>
-            <Col xl={4} lg={6} md={12} xs={12} className="mb-3">
-              <PricingCard content={n2} />
             </Col>
           </Row>
         </Row>
