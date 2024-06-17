@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { UseEffect, UseState } from "react";
 import { Col, Container, Form, Row, Table } from "react-bootstrap";
 
 const detailsNarSatu = ({ params }) => {
   const narId = params.id;
-  const [data, setData] = useState([]);
+  const [data, setData] = UseState([]);
 
-  useEffect(() => {
+  UseEffect(() => {
     const detailNarSatu = async () => {
       const narsatu = await fetch(process.env.NEXT_PUBLIC_API_URL + 'nar1/' + narId, {
         method: 'GET',

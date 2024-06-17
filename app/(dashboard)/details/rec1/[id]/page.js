@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { UseEffect, UseState } from "react";
 import { Col, Container, Form, Row, Table } from "react-bootstrap";
 
 const detailsRecSatu = ({ params }) => {
   const recId = params.id;
-  const [data, setData] = useState([]);
+  const [data, setData] = UseState([]);
 
-  useEffect(() => {
+  UseEffect(() => {
     const detailRecSatu = async () => {
       const recsatu = await fetch(process.env.NEXT_PUBLIC_API_URL + 'rec1/' + recId, {
         method: 'GET',
