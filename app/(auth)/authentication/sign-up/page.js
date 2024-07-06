@@ -77,54 +77,54 @@ const SignUp = () => {
         <Card className="smooth-shadow-md">
           {/* Card body */}
           <Card.Body className="p-6">
-            <div className="mb-4">
-              <Link href="/" className='mb-3'><Image src="/images/Logo_Solusi_Bangun_Indonesia.svg.png" 
-                className="mb-5" alt="" width={250} height={50}/></Link>
-              <h3 className="mb-6 fw-bold">Sign Up</h3>
+            <div className="mb-2">
+              <Link href="/" className='mb-1'><Image src="/images/Logo_Solusi_Bangun_Indonesia.svg.png" 
+                className="mb-3 align-center" alt="" width={250} height={50}/></Link>
+              <h3 className="mb-4 fw-bold">Sign Up</h3>
             </div>
             {/* Form */}
             {hasMounted && 
             <Form onSubmit={handleSubmit}>
               {/* Username */}
-              <Form.Group className="mb-3" controlId="name">
+              <Form.Group className="mb-1" controlId="name">
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="text" name="name" placeholder="Budiono" required="" 
+                <Form.Control type="text" name="name" placeholder="" required="" 
                   value={name}
                   onChange={(e) => setName(e.target.value)}  
                 />
               </Form.Group>
 
               {/* Email */}
-              <Form.Group className="mb-3" controlId="email">
+              <Form.Group className="mb-1" controlId="email">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" name="email" placeholder="bidiono@gmail.com" required="" 
+                <Form.Control type="email" name="email" placeholder="" required="" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}  
                 />
               </Form.Group>
 
               {/* Phonenumber */}
-              <Form.Group className="mb-3" controlId="phonenumber">
+              <Form.Group className="mb-1" controlId="phonenumber">
                 <Form.Label>Phone Number</Form.Label>
-                <Form.Control type="number" name="phonenumber" placeholder="62812XXXXX" required="" 
+                <Form.Control type="number" name="phonenumber" placeholder="" required="" 
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}  
                 />
               </Form.Group>
 
               {/* Password */}
-              <Form.Group className="mb-3" controlId="password">
+              <Form.Group className="mb-1" controlId="password">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" name="password" placeholder="**************" required="" 
+                <Form.Control type="password" name="password" placeholder="" required="" 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}  
                 />
               </Form.Group>
 
               {/* Confirm Password */}
-              <Form.Group className="mb-3" controlId="confirmpassword">
+              <Form.Group className="mb-1" controlId="confirmpassword">
                 <Form.Label>Confirm Password</Form.Label>
-                <Form.Control type="password" name="confirmpassword" placeholder="**************" required="" 
+                <Form.Control type="password" name="confirmpassword" placeholder="" required="" 
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}   
                 />

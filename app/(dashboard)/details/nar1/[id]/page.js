@@ -1,13 +1,13 @@
 'use client';
 
-import { UseEffect, UseState } from "react";
+import { useEffect, useState } from "react";
 import { Col, Container, Form, Row, Table } from "react-bootstrap";
 
 const detailsNarSatu = ({ params }) => {
   const narId = params.id;
-  const [data, setData] = UseState([]);
+  const [data, setData] = useState([]);
 
-  UseEffect(() => {
+  useEffect(() => {
     const detailNarSatu = async () => {
       const narsatu = await fetch(process.env.NEXT_PUBLIC_API_URL + 'nar1/' + narId, {
         method: 'GET',
@@ -40,12 +40,11 @@ const detailsNarSatu = ({ params }) => {
                     <thead>
                       <tr>
                         <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '7%' }} className='text-center'><b>No</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>HAC</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Task</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Standard</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '10%' }} className='text-center'><b>Actual Value</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Remark</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Status</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '7%' }} className='text-center'><b>HAC</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '37%' }} className='text-center'><b>Task</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '27%' }} className='text-center'><b>Standard</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '7%' }} className='text-center'><b>Actual Value</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '15%' }} className='text-center'><b>Status</b></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -75,10 +74,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_1_rotating_part}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiSgRotatingParts_r' name="wqiSgRotatingParts_r" placeholder=""
-                          value={data.wq1_1_rotating_part_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.wq1_1_rotating_part ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -92,10 +87,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_1_hsc}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiSgHSC_r' name="wqiSgHSC_r" placeholder=""
-                          value={data.wq1_1_hsc_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_hsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -109,10 +100,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_1_lsc}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiSgLSC_r' name="wqiSgLSC_r" placeholder=""
-                          value={data.wq1_1_lsc_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_lsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -126,10 +113,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_1_csw}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiSgCSW_r' name="wqiSgCSW_r" placeholder=""
-                          value={data.wq1_1_csw_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_csw ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -143,10 +126,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_1_remaining_guarding}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiSgRG_r' name="wqiSgRG_r" placeholder=""
-                          value={data.wq1_1_remaining_guarding_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_1_remaining_guarding ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       {/* REDUCER */}
@@ -166,22 +145,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_2_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiRedNoise_r' name="wqiRedNoise_r" placeholder=""
-                          value={data.wq1_2_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 60⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='wqiRedTemp' name="wqiRedTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='wqiRedTemp' name="wqiRedTemp" placeholder=""
                           value={data.wq1_2_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiRedTemp_r' name="wqiRedTemp_r" placeholder=""
-                          value={data.wq1_2_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_2_temp) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -196,10 +167,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_2_seal}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiRedSeal_r' name="wqiRedSeal_r" placeholder=""
-                          value={data.wq1_2_seal_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -213,10 +180,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_2_level_oil}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiRedLevelOli_r' name="wqiRedLevelOli_r" placeholder=""
-                          value={data.wq1_2_level_oil_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_level_oil ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -230,10 +193,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_2_drive_s}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiRedRS_r' name="wqiRedRS_r" placeholder=""
-                          value={data.wq1_2_drive_s_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_drive_s ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -248,10 +207,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_2_driven_s}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiRedDVS_r' name="wqiRedDVS_r" placeholder=""
-                          value={data.wq1_2_driven_s_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_driven_s ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -265,10 +220,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_2_chain}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiRedChain_r' name="wqiRedChain_r" placeholder=""
-                          value={data.wq1_2_chain_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_chain ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -282,10 +233,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_2_coupling}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiRedCoup_r' name="wqiRedCoup_r" placeholder=""
-                          value={data.wq1_2_coupling_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_coupling ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -306,10 +253,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_3_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiBhfNoise_r' name="wqiBhfNoise_r" placeholder=""
-                          value={data.wq1_3_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_3_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -317,12 +260,8 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='wqiBhfTemp' name="wqiBhfTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='wqiBhfTemp' name="wqiBhfTemp" placeholder=""
                           value={data.wq1_3_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiBhfTemp_r' name="wqiBhfTemp_r" placeholder=""
-                          value={data.wq1_3_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_3_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -344,10 +283,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_4_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiBhfrNoise_r' name="wqiBhfrNoise_r" placeholder=""
-                          value={data.wq1_4_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_4_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -355,12 +290,8 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='wqiBhfrTemp' name="wqiBhfrTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='wqiBhfrTemp' name="wqiBhfrTemp" placeholder=""
                           value={data.wq1_4_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiBhfrTemp_r' name="wqiBhfrTemp_r" placeholder=""
-                          value={data.wq1_4_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_4_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -382,10 +313,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_5_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiBfNoise_r' name="wqiBfNoise_r" placeholder=""
-                          value={data.wq1_5_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_5_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -393,12 +320,8 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='wqiBfTemp' name="wqiBfTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='wqiBfTemp' name="wqiBfTemp" placeholder=""
                           value={data.wq1_5_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiBfTemp_r' name="wqiBfTemp_r" placeholder=""
-                          value={data.wq1_5_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_5_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -414,10 +337,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_5_tc}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiBfTc_r' name="wqiBfTc_r" placeholder=""
-                          value={data.wq1_5_tc_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_5_tc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -438,10 +357,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.wq1_6_cleanliness}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='wqiCClean_r' name="wqiCClean_r" placeholder=""
-                          value={data.wq1_6_cleanliness_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_6_cleanliness ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -473,10 +388,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_1_rotating_part}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hc1SgRotpart_r' name="hc1SgRotpart_r" placeholder=""
-                          value={data.hc1_1_rotating_part_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_1_rotating_part ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -491,10 +402,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_1_hsc}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hc1SgHsc_r' name="hc1SgHsc_r" placeholder=""
-                          value={data.hc1_1_hsc_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_1_hsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -509,10 +416,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_1_remaining_guarding}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hc1SgRg_r' name="hc1SgRg_r" placeholder=""
-                          value={data.hc1_1_remaining_guarding_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_1_remaining_guarding ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -532,10 +435,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_2_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hc1BhfrNoise_r' name="hc1BhfrNoise_r" placeholder=""
-                          value={data.hc1_2_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_2_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -550,10 +449,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_2_seal}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hc1BhfrSeal_r' name="hc1BhfrSeal_r" placeholder=""
-                          value={data.hc1_2_seal_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_2_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -561,12 +456,8 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 60⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='hc1BhfrTemp' name="hc1BhfrTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='hc1BhfrTemp' name="hc1BhfrTemp" placeholder=""
                           value={data.hc1_2_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hc1BhfrTemp_r' name="hc1BhfrTemp_r" placeholder=""
-                          value={data.hc1_2_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_2_temp) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -587,10 +478,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_3_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hc1BhfreNoise_r' name="hc1BhfreNoise_r" placeholder=""
-                          value={data.hc1_3_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_3_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -605,10 +492,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_3_seal}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hc1BhfreSeal_r' name="hc1BhfreSeal_r" placeholder=""
-                          value={data.hc1_3_seal_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_3_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -616,12 +499,8 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 60⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='hc1BhfreTemp' name="hc1BhfreTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='hc1BhfreTemp' name="hc1BhfreTemp" placeholder=""
                           value={data.hc1_3_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hc1BhfreTemp_r' name="hc1BhfreTemp_r" placeholder=""
-                          value={data.hc1_3_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_3_temp) ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -642,10 +521,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_4_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hciRbpNoise_r' name="hciRbpNoise_r" placeholder=""
-                          value={data.hc1_4_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -660,10 +535,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_4_seal}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hciRbpSeal_r' name="hciRbpSeal_r" placeholder=""
-                          value={data.hc1_4_seal_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -671,12 +542,8 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 60⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='hciRbpTemp' name="hciRbpTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='hciRbpTemp' name="hciRbpTemp" placeholder=""
                           value={data.hc1_4_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hciRbpTemp_r' name="hciRbpTemp_r" placeholder=""
-                          value={data.hc1_4_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_4_temp) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -692,10 +559,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_4_level_oil}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hciRbpLevelOli_r' name="hciRbpLevelOli_r" placeholder=""
-                          value={data.hc1_4_level_oil_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_level_oil ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -710,10 +573,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_4_cd}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hciRbpCD_r' name="hciRbpCD_r" placeholder=""
-                          value={data.hc1_4_cd_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_cd ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -728,10 +587,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_4_drive_s}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hciRbpDvS_r' name="hciRbpDvS_r" placeholder=""
-                          value={data.hc1_4_drive_s_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_drive_s ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -746,10 +601,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_4_driven_s}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hciRbpDvnS_r' name="hciRbpDvnS_r" placeholder=""
-                          value={data.hc1_4_driven_s_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_driven_s ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -769,10 +620,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_5_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hciRbpBpNoise_r' name="hciRbpBpNoise_r" placeholder=""
-                          value={data.hc1_5_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_5_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -787,10 +634,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_5_seal}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hciRbpBpSeal_r' name="hciRbpBpSeal_r" placeholder=""
-                          value={data.hc1_5_seal_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_5_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -798,12 +641,8 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='hciRbpBpTemp' name="hciRbpBpTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='hciRbpBpTemp' name="hciRbpBpTemp" placeholder=""
                           value={data.hc1_5_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hciRbpBpTemp_r' name="hciRbpBpTemp_r" placeholder=""
-                          value={data.hc1_5_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_5_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -824,10 +663,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_6_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hci6noise_r' name="hci6noise_r" placeholder=""
-                          value={data.hc1_6_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_6_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -842,10 +677,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_6_seal}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hci6seal_r' name="hci6seal_r" placeholder=""
-                          value={data.hc1_6_seal_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_6_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -853,12 +684,8 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='hci6temp' name="hci6temp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='hci6temp' name="hci6temp" placeholder=""
                           value={data.hc1_6_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hci6temp_r' name="hci6temp_r" placeholder=""
-                          value={data.hc1_6_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_6_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -879,10 +706,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_7_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hci7noise_r' name="hci7noise_r" placeholder=""
-                          value={data.hc1_7_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_7_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -890,12 +713,8 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='hci7temp' name="hci7temp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='hci7temp' name="hci7temp" placeholder=""
                           value={data.hc1_7_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hci7temp_r' name="hci7temp_r" placeholder=""
-                          value={data.hc1_7_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_7_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -916,10 +735,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_8_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hci8noise_r' name="hci8noise_r" placeholder=""
-                          value={data.hc1_8_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_8_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -927,12 +742,8 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='hci8temp' name="hci8temp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='hci8temp' name="hci8temp" placeholder=""
                           value={data.hc1_8_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hci8temp_r' name="hci8temp_r" placeholder=""
-                          value={data.hc1_8_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_8_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -953,10 +764,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.hc1_9_cleanliness}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='hci9cesing_r' name="hci9cesing_r" placeholder=""
-                          value={data.hc1_9_cleanliness_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_9_cleanliness ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -964,10 +771,10 @@ const detailsNarSatu = ({ params }) => {
 
                       {/* BC1 */}
                       <tr>
-                        <td rowSpan={73} className='text-center align-middle'>
+                        <td rowSpan={72} className='text-center align-middle'>
                           <span>2</span>
                         </td>
-                        <td rowSpan={73} className='text-center align-middle rotate-text'>
+                        <td rowSpan={72} className='text-center align-middle rotate-text'>
                           <b>NR.213-BC1</b>
                         </td>
                       </tr>
@@ -988,10 +795,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_1_rotating_part}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSgRotatingParts_r' name="crbciSgRotatingParts_r" placeholder=""
-                          value={data.crbc1_1_rotating_part_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_1_rotating_part ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1005,10 +808,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_1_hsc}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSgHSC_r' name="crbciSgHSC_r" placeholder=""
-                          value={data.crbc1_1_hsc_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc1_1_hsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1022,10 +821,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_1_lsc}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSgLSC_r' name="crbciSgLSC_r" placeholder=""
-                          value={data.crbc1_1_lsc_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc1_1_lsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1039,10 +834,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_1_csb}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSgCSB_r' name="crbciSgCSB_r" placeholder=""
-                          value={data.crbc1_1_csb_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc1_1_csb ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1056,10 +847,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_1_remaining_guarding}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSgRG_r' name="crbciSgRG_r" placeholder=""
-                          value={data.crbc1_1_remaining_guarding_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc1_1_remaining_guarding ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1078,10 +865,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_2_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadLagging_r' name="crbciHeadLagging_r" placeholder=""
-                          value={data.crbc1_2_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_2_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1095,10 +878,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_2_primary}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadPrimary_r' name="crbciHeadPrimary_r" placeholder=""
-                          value={data.crbc1_2_primary_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_2_primary ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1112,10 +891,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_2_secondary}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadSecondary_r' name="crbciHeadSecondary_r" placeholder=""
-                          value={data.crbc1_2_secondary_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_2_secondary ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1134,22 +909,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_2_fix_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadFixNoise_r' name="crbciHeadFixNoise_r" placeholder=""
-                          value={data.crbc1_2_fix_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_2_fix_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciHeadFixTemp' name="crbciHeadFixTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciHeadFixTemp' name="crbciHeadFixTemp" placeholder=""
                           value={data.crbc1_2_fix_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadFixTemp_r' name="crbciHeadFixTemp_r"placeholder=""
-                          value={data.crbc1_2_fix_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_2_fix_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1169,22 +936,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_2_free_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadFreeNoise_r' name="crbciHeadFreeNoise_r" placeholder=""
-                          value={data.crbc1_2_free_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_2_free_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciHeadFreeTemp' name="crbciHeadFreeTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciHeadFreeTemp' name="crbciHeadFreeTemp" placeholder=""
                           value={data.crbc1_2_free_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadFreeTemp_r' name="crbciHeadFreeTemp_r"placeholder=""
-                          value={data.crbc1_2_free_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_2_free_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1204,22 +963,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_2_red_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadRedNoise_r' name="crbciHeadRedNoise_r" placeholder=""
-                          value={data.crbc1_2_red_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_2_red_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciHeadRedTemp' name="crbciHeadRedTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciHeadRedTemp' name="crbciHeadRedTemp" placeholder=""
                           value={data.crbc1_2_red_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadRedTemp_r' name="crbciHeadRedTemp_r"placeholder=""
-                          value={data.crbc1_2_red_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_2_red_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1234,10 +985,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_2_red_seal}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadRedSeal_r' name="crbciHeadRedSeal_r" placeholder=""
-                          value={data.crbc1_2_red_seal_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_2_red_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1251,10 +998,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_2_red_oli}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadRedOli_r' name="crbciHeadRedOli_r" placeholder=""
-                          value={data.crbc1_2_red_oli_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_2_red_oli ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1268,10 +1011,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_2_red_coupling}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciHeadRedCoupling_r' name="crbciHeadRedCoupling_r" placeholder=""
-                          value={data.crbc1_2_red_coupling_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_2_red_coupling ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1290,10 +1029,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_3_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSnubLagging_r' name="crbciSnubLagging_r" placeholder=""
-                          value={data.crbc1_3_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_3_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1312,22 +1047,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_3_utara_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSnubUtaraNoise_r' name="crbciSnubUtaraNoise_r" placeholder=""
-                          value={data.crbc1_3_utara_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_3_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciSnubUtaraTemp' name="crbciSnubUtaraTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciSnubUtaraTemp' name="crbciSnubUtaraTemp" placeholder=""
                           value={data.crbc1_3_utara_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSnubUtaraTemp_r' name="crbciSnubUtaraTemp_r"placeholder=""
-                          value={data.crbc1_3_utara_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_3_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1347,22 +1074,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_3_sel_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSnubSelNoise_r' name="crbciSnubSelNoise_r" placeholder=""
-                          value={data.crbc1_3_sel_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_3_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciSnubSelTemp' name="crbciSnubSelTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciSnubSelTemp' name="crbciSnubSelTemp" placeholder=""
                           value={data.crbc1_3_sel_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSnubSelTemp_r' name="crbciSnubSelTemp_r"placeholder=""
-                          value={data.crbc1_3_sel_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_3_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1382,10 +1101,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_4_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciBaratLagging_r' name="crbciBaratLagging_r" placeholder=""
-                          value={data.crbc1_4_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_4_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1404,22 +1119,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_4_utara_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciBaratUtaraNoise_r' name="crbciBaratUtaraNoise_r" placeholder=""
-                          value={data.crbc1_4_utara_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_4_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciBaratUtaraTemp' name="crbciBaratUtaraTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciBaratUtaraTemp' name="crbciBaratUtaraTemp" placeholder=""
                           value={data.crbc1_4_utara_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciBaratUtaraTemp_r' name="crbciBaratUtaraTemp_r"placeholder=""
-                          value={data.crbc1_4_utara_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_4_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1439,22 +1146,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_4_sel_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciBaratSelatanNoise_r' name="crbciBaratSelatanNoise_r" placeholder=""
-                          value={data.crbc1_4_sel_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_4_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciBaratSelatanTemp' name="crbciBaratSelatanTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciBaratSelatanTemp' name="crbciBaratSelatanTemp" placeholder=""
                           value={data.crbc1_4_sel_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciBaratSelatanTemp_r' name="crbc1_4_sel_temp_rm"placeholder=""
-                          value={data.rebc1_4_timur_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_4_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1474,10 +1173,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_5_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTimurLagging_r' name="crbciTimurLagging_r" placeholder=""
-                          value={data.crbc1_5_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_5_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1496,22 +1191,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_5_utara_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTimurUtaraNoise_r' name="crbciTimurUtaraNoise_r" placeholder=""
-                          value={data.crbc1_5_utara_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_5_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciTimurUtaraTemp' name="crbciTimurUtaraTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciTimurUtaraTemp' name="crbciTimurUtaraTemp" placeholder=""
                           value={data.crbc1_5_utara_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTimurUtaraTemp_r' name="crbciTimurUtaraTemp_r"placeholder=""
-                          value={data.crbc1_5_utara_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_5_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1531,22 +1218,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_5_sel_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTimurSelatanNoise_r' name="crbciTimurSelatanNoise_r" placeholder=""
-                          value={data.crbc1_5_sel_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_5_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciTimurSelatanTemp' name="crbciTimurSelatanTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciTimurSelatanTemp' name="crbciTimurSelatanTemp" placeholder=""
                           value={data.crbc1_5_sel_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTimurSelatanTemp_r' name="crbciTimurSelatanTemp_r"placeholder=""
-                          value={data.crbc1_5_sel_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_5_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1566,10 +1245,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_6_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTakeLagging_r' name="crbciTakeLagging_r" placeholder=""
-                          value={data.crbc1_6_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_6_lagging_rm ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1588,22 +1263,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_6_utara_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTakeUtaraNoise_r' name="crbciTakeUtaraNoise_r" placeholder=""
-                          value={data.crbc1_6_utara_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_6_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciTakeUtaraTemp' name="crbciTakeUtaraTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciTakeUtaraTemp' name="crbciTakeUtaraTemp" placeholder=""
                           value={data.crbc1_6_utara_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTakeUtaraTemp_r' name="crbciTakeUtaraTemp_r"placeholder=""
-                          value={data.crbc1_6_utara_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_6_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1623,22 +1290,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_6_sel_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTakeSelNoise_r' name="crbciTakeSelNoise_r" placeholder=""
-                          value={data.crbc1_6_sel_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_6_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciTakeSelTemp' name="crbciTakeSelTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciTakeSelTemp' name="crbciTakeSelTemp" placeholder=""
                           value={data.crbc1_6_sel_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTakeSelTemp_r' name="crbciTakeSelTemp_r"placeholder=""
-                          value={data.crbc1_6_sel_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_6_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1658,10 +1317,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_7_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTailLagging_r' name="rebciTaicrbciTailLagging_rlLagging_r" placeholder=""
-                          value={data.crbc1_7_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_7_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1675,10 +1330,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_7_vs}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTailVs_r' name="crbciTailVs_r" placeholder=""
-                          value={data.crbc1_7_vs_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_7_vs ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1697,22 +1348,14 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_7_utara_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTailUtaraNoise_r' name="crbciTailUtaraNoise_r" placeholder=""
-                          value={data.crbc1_7_utara_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_7_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='crbciTailUtaraTemp' name="crbciTailUtaraTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='crbciTailUtaraTemp' name="crbciTailUtaraTemp" placeholder=""
                           value={data.crbc1_7_utara_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTailUtaraTemp_r' name="crbciTailUtaraTemp_r"placeholder=""
-                          value={data.crbc1_7_utara_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_7_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1732,10 +1375,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_7_sel_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTailSelNoise_r' name="crbciTailSelNoise_r" placeholder=""
-                          value={data.crbc1_7_sel_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_7_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1744,10 +1383,6 @@ const detailsNarSatu = ({ params }) => {
                         <td className='p-0'><Form.Control
                           style={{ height: '65px' }} type="number" id='crbciTailSelTemp' name="crbciTailSelTemp" placeholder=""
                           value={data.crbc1_7_sel_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciTailSelTemp_r' name="crbciTailSelTemp_r"placeholder=""
-                          value={data.crbc1_7_sel_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc1_7_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1767,10 +1402,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_8_skirt}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciSkirt_r' name="crbciSkirt_r" placeholder=""
-                          value={data.crbc1_8_skirt_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_8_skirt ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1784,10 +1415,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_8_chute}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciChute_r' name="crbciChute_r" placeholder=""
-                          value={data.crbc1_8_chute_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_8_chute ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1801,10 +1428,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_8_condition}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciCondition_r' name="crbciCondition_r" placeholder=""
-                          value={data.crbc1_8_condition_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_8_condition ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1818,10 +1441,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_8_joint}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciJoint_r' name="crbciJoint_r" placeholder=""
-                          value={data.crbc1_8_joint_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_8_joint ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1835,10 +1454,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_8_impact}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciImpact_r' name="crbciImpact_r" placeholder=""
-                          value={data.crbc1_8_impact_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_8_impact ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1852,10 +1467,6 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_8_carry}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciCarry_r' name="crbciCarry_r" placeholder=""
-                          value={data.crbc1_8_carry_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_8_carry ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1869,13 +1480,1140 @@ const detailsNarSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.crbc1_8_return}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='crbciReturn_r' name="crbciReturn_r" placeholder=""
-                          value={data.crbc1_8_return_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.crbc1_8_return ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
-                    </tbody>
+                      {/* MS1 */}
+                      <tr>
+                        <td rowSpan={39} className='text-center align-middle'>
+                          <span>4</span>
+                        </td>
+                        <td rowSpan={39} className='text-center align-middle rotate-text'>
+                          <b>NR.213-MS1</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>1. Safey Guard</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rotating Parts</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiSgRot'
+                            name='crmsiSgRot'
+                            className="large-checkbox"
+                            checked={data.crms1_1_rotating_part}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_1_rotating_part ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Cover Tail Pulley</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiSgCTP'
+                            name='crmsiSgCTP'
+                            className="large-checkbox"
+                            checked={data.crms1_1_ctp}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_1_ctp ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Cover Head Pulley</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiSgCHP'
+                            name='crmsiSgCHP'
+                            className="large-checkbox"
+                            checked={data.crms1_1_chp}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_1_chp ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Cover Along Belt</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiSgCAB'
+                            name='crmsiSgCAB'
+                            className="large-checkbox"
+                            checked={data.crms1_1_cab}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_1_cab ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>2. Motor</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Foundation Bolts</td>
+                        <td className='align-middle'>Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiMotorFound'
+                            name='crmsiMotorFound'
+                            className="large-checkbox"
+                            checked={data.crms1_2_foundation}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_2_foundation ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperature Bearing LS</td>
+                        <td className='align-middle'>&lt; 65⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crmsiMotorTempLS' name="crmsiMotorTempLS" placeholder=""
+                          value={data.crms1_2_temp_ls}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crms1_2_temp_ls) < 65 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperature Bearing FS</td>
+                        <td className='align-middle'>&lt; 65⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crmsiMotorTempFS' name="crmsiMotorTempFS" placeholder=""
+                          value={data.crms1_2_temp_fs}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crms1_2_temp_fs) < 65 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>3. Transmission Drive</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>V-Belts</td>
+                        <td className='align-middle'>Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiVBelt'
+                            name='crmsiVBelt'
+                            className="large-checkbox"
+                            checked={data.crms1_3_vbelt}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_3_vbelt ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Cover V-Belts</td>
+                        <td className='align-middle'>Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiVCover'
+                            name='crmsiVCover'
+                            className="large-checkbox"
+                            checked={data.crms1_3_cover}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_3_cover ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={4} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>4. Reducer</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperature</td>
+                        <td className='align-middle'>&lt; 65⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crmsiRedTemp' name="crmsiRedTemp" placeholder=""
+                          value={data.crms1_4_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crms1_4_temp) < 65 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Oil Level</td>
+                        <td className='align-middle'>In Range</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiRedOli'
+                            name='crmsiRedOli'
+                            className="large-checkbox"
+                            checked={data.crms1_4_level_oli}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_4_level_oli ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Seal Oil High Speed</td>
+                        <td className='align-middle'>No Leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiRedSealHS'
+                            name='crmsiRedSealHS'
+                            className="large-checkbox"
+                            checked={data.crms1_4_seal_hs}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_4_seal_hs ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Seal Oil Low Speed</td>
+                        <td className='align-middle'>No Leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiRedSealLS'
+                            name='crmsiRedSealLS'
+                            className="large-checkbox"
+                            checked={data.crms1_4_seal_ls}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_4_seal_ls ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>No Noise</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiRedNoise'
+                            name='crmsiRedNoise'
+                            className="large-checkbox"
+                            checked={data.crms1_4_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_4_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Foundation Bolts</td>
+                        <td className='align-middle'>Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiRedFound'
+                            name='crmsiRedFound'
+                            className="large-checkbox"
+                            checked={data.crms1_4_foundation}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_4_foundation ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>5. Head Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperature Bearing Fix</td>
+                        <td className='align-middle'>&lt; 65⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crmsiHeadTempFix' name="crmsiHeadTempFix" placeholder=""
+                          value={data.crms1_5_temp_fix}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crms1_5_temp_fix) < 65 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise Bearing Fix</td>
+                        <td className='align-middle'>No Noise</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiHeadNoiseFix'
+                            name='crmsiHeadNoiseFix'
+                            className="large-checkbox"
+                            checked={data.crms1_5_noise_fix}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_5_noise_fix ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperature Bearing Free</td>
+                        <td className='align-middle'>&lt; 65⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crmsiHeadTempFree' name="crmsiHeadTempFree" placeholder=""
+                          value={data.crms1_5_temp_free}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crms1_5_temp_free) < 65 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise Bearing Free</td>
+                        <td className='align-middle'>No Noise</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiHeadNoiseFree'
+                            name='crmsiHeadNoiseFree'
+                            className="large-checkbox"
+                            checked={data.crms1_5_noise_free}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_5_noise_free ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Legging</td>
+                        <td className='align-middle'>No Crack</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiHeadLegging'
+                            name='crmsiHeadLegging'
+                            className="large-checkbox"
+                            checked={data.crms1_5_legging}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_5_legging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>6. Tail Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperature Bearing Fix</td>
+                        <td className='align-middle'>&lt; 65⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crmsiTailTempFix' name="crmsiTailTempFix" placeholder=""
+                          value={data.crms1_6_temp_fix}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crms1_6_temp_fix) < 65 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise Bearing Fix</td>
+                        <td className='align-middle'>No Noise</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiTaiNoiselFix'
+                            name='crmsiTaiNoiselFix'
+                            className="large-checkbox"
+                            checked={data.crms1_6_noise_fix}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_6_noise_fix ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperature Bearing Free</td>
+                        <td className='align-middle'>&lt; 65⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crmsiTailTempFree' name="crmsiTailTempFree" placeholder=""
+                          value={data.crms1_6_temp_free}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crms1_6_temp_free) < 65 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise Bearing Free</td>
+                        <td className='align-middle'>No Noise</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiTailNoiseFree'
+                            name='crmsiTailNoiseFree'
+                            className="large-checkbox"
+                            checked={data.crms1_6_noise_free}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_6_noise_free ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Legging</td>
+                        <td className='align-middle'>No Crack</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiTailLegging'
+                            name='crmsiTailLegging'
+                            className="large-checkbox"
+                            checked={data.crms1_6_legging}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_6_legging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>7. Support Roller</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Carrier Roller</td>
+                        <td className='align-middle'>No Stuck</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiSupportRoller'
+                            name='crmsiSupportRoller'
+                            className="large-checkbox"
+                            checked={data.crms1_7_roller}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_7_roller ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Clean Lines</td>
+                        <td className='align-middle'>No Crack</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiSupportClean'
+                            name='crmsiSupportClean'
+                            className="large-checkbox"
+                            checked={data.crms1_7_clean}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_7_clean ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>8. Belt Conveyor</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Belt Condition</td>
+                        <td className='align-middle'>No Stuck</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiBeltCondition'
+                            name='crmsiBeltCondition'
+                            className="large-checkbox"
+                            checked={data.crms1_8_condition}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_8_condition ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Belt Joint</td>
+                        <td className='align-middle'>No Crack</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiBeltjoint'
+                            name='crmsiBeltjoint'
+                            className="large-checkbox"
+                            checked={data.crms1_8_joint}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_8_joint ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Cleanliness</td>
+                        <td className='align-middle'>Clean</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crmsiBeltCleanliness'
+                            name='crmsiBeltCleanliness'
+                            className="large-checkbox"
+                            checked={data.crms1_8_cleanliness}
+                          /></td>
+                        <td className='align-middle'><b>{data.crms1_8_cleanliness ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      {/* BC2 */}
+                      <tr>
+                        <td rowSpan={72} className='text-center align-middle'>
+                          <span>5</span>
+                        </td>
+                        <td rowSpan={72} className='text-center align-middle rotate-text'>
+                          <b>NR.213-BC2</b>
+                        </td>
+                      </tr>
+                      {/* SAFETY GUARD */}
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>1. Safety Guard</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rotating parts</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSgRotatingParts'
+                            name='crbciiSgRotatingParts'
+                            className="large-checkbox"
+                            checked={data.crbc2_1_rotating_part}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_1_rotating_part ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>High Speed Cover</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSgHSC'
+                            name='crbciiSgHSC'
+                            className="large-checkbox"
+                            checked={data.crbc2_1_hsc}
+                          /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc2_1_hsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Low Speed Cover</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSgLSC'
+                            name='crbciiSgLSC'
+                            className="large-checkbox"
+                            checked={data.crbc2_1_lsc}
+                          /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc2_1_lsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Cover Sepanjang Belt</td>
+                        <td className='align-middle'>Secured, Tight</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSgCSB'
+                            name='crbciiSgCSB'
+                            className="large-checkbox"
+                            checked={data.crbc2_1_csb}
+                          /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc2_1_csb ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Remaining guarding</td>
+                        <td className='align-middle'>All in place and not loose</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSgRG'
+                            name='crbciiSgRG'
+                            className="large-checkbox"
+                            checked={data.crbc2_1_remaining_guarding}
+                          /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc2_1_remaining_guarding ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>2. Head Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiHeadLagging'
+                            name='crbciiHeadLagging'
+                            className="large-checkbox"
+                            checked={data.crbc2_2_lagging}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_2_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Scrapper Primary</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiHeadPrimary'
+                            name='crbciiHeadPrimary'
+                            className="large-checkbox"
+                            checked={data.crbc2_2_primary}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_2_primary ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Scrapper Secondary</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiHeadSecondary'
+                            name='crbciiHeadSecondary'
+                            className="large-checkbox"
+                            checked={data.crbc2_2_secondary}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_2_secondary ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Fix</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiHeadFixNoise'
+                            name='crbciiHeadFixNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_2_fix_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_2_fix_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiHeadFixTemp' name="crbciiHeadFixTemp" placeholder=""
+                          value={data.crbc2_2_fix_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_2_fix_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Free</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiHeadFreeNoise'
+                            name='crbciiHeadFreeNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_2_free_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_2_free_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiHeadFreeTemp' name="crbciiHeadFreeTemp" placeholder=""
+                          value={data.crbc2_2_free_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_2_free_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Reducer</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiHeadRedNoise'
+                            name='crbciiHeadRedNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_2_red_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_2_red_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiHeadRedTemp' name="crbciiHeadRedTemp" placeholder=""
+                          value={data.crbc2_2_red_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_2_red_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Seal</td>
+                        <td className='align-middle'>No leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiHeadRedSeal'
+                            name='crbciiHeadRedSeal'
+                            className="large-checkbox"
+                            checked={data.crbc2_2_red_seal}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_2_red_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Level Oli</td>
+                        <td className='align-middle'>Cukup (normal)</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiHeadRedOli'
+                            name='crbciiHeadRedOli'
+                            className="large-checkbox"
+                            checked={data.crbc2_2_red_oli}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_2_red_oli ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Level Oli</td>
+                        <td className='align-middle'>Cukup (normal)</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiHeadRedCoupling'
+                            name='crbciiHeadRedCoupling'
+                            className="large-checkbox"
+                            checked={data.crbc2_2_red_coupling}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_2_red_coupling ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>3. Snub Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSnubLagging'
+                            name='crbciiSnubLagging'
+                            className="large-checkbox"
+                            checked={data.crbc2_3_lagging}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_3_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSnubUtaraNoise'
+                            name='crbciiSnubUtaraNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_3_utara_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_3_utara_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiSnubUtaraTemp' name="crbciiSnubUtaraTemp" placeholder=""
+                          value={data.crbc2_3_utara_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_3_utara_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSnubSelNoise'
+                            name='crbciiSnubSelNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_3_sel_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_3_sel_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiSnubSelTemp' name="crbciiSnubSelTemp" placeholder=""
+                          value={data.crbc2_3_sel_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_3_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>4. Bend Pulley Utara</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiUtaraLagging'
+                            name='crbciiUtaraLagging'
+                            className="large-checkbox"
+                            checked={data.crbc2_4_lagging}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_4_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing barat</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiUtaraBaratNoise'
+                            name='crbciiUtaraBaratNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_4_barat_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_4_barat_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiUtaraBaratTemp' name="crbciiUtaraBaratTemp" placeholder=""
+                          value={data.crbc2_4_barat_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_4_barat_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Timur</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiUtaraTimurNoise'
+                            name='crbciiUtaraTimurNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_4_timur_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_4_timur_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiUtaraTimurTemp' name="crbciiUtaraTimurTemp" placeholder=""
+                          value={data.crbc2_4_timur_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_4_timur_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>5. Bend Pulley Selatan</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSelatanLagging'
+                            name='crbciiSelatanLagging'
+                            className="large-checkbox"
+                            checked={data.crbc2_5_lagging}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_5_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing barat</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSelatanBaratNoise'
+                            name='crbciiSelatanBaratNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_5_barat_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_5_barat_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiSelatanBaratTemp' name="crbciiSelatanBaratTemp" placeholder=""
+                          value={data.crbc2_5_barat_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_5_barat_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Timur</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSelatanTimurNoise'
+                            name='crbciiSelatanTimurNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_5_timur_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_5_timur_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiSelatanTimurTemp' name="crbciiSelatanTimurTemp" placeholder=""
+                          value={data.crbc2_5_timur_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_5_timur_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>6. Take Up Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiTakeLagging'
+                            name='crbciiTakeLagging'
+                            className="large-checkbox"
+                            checked={data.crbc2_6_lagging}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_6_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing barat</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiTakeBaratNoise'
+                            name='crbciiTakeBaratNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_6_barat_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_6_barat_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiTakeBaratTemp' name="crbciiTakeBaratTemp" placeholder=""
+                          value={data.crbc2_6_barat_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_6_barat_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Timur</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiTakeTimurNoise'
+                            name='crbciiTakeTimurNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_6_timur_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_6_timur_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiTakeTimurTemp' name="crbciiTakeTimurTemp" placeholder=""
+                          value={data.crbc2_6_timur_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_6_timur_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>7. Tail Pulley</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Lagging</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiTailLagging'
+                            name='crbciiTailLagging'
+                            className="large-checkbox"
+                            checked={data.crbc2_7_lagging}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_7_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>V Scrapper</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiTailVs'
+                            name='crbciiTailVs'
+                            className="large-checkbox"
+                            checked={data.crbc2_7_vs}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_7_vs ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing barat</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiTailBaratNoise'
+                            name='crbciiTailBaratNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_7_barat_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_7_barat_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiTailBaratTemp' name="crbciiTailBaratTemp" placeholder=""
+                          value={data.crbc2_7_barat_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_7_barat_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>  Bearing Timur</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Noise</td>
+                        <td className='align-middle'>Normal</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiTailTimurNoise'
+                            name='crbciiTailTimurNoise'
+                            className="large-checkbox"
+                            checked={data.crbc2_7_timur_noise}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_7_timur_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 40⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='crbciiTailTimurTemp' name="crbciiTailTimurTemp" placeholder=""
+                          value={data.crbc2_7_timur_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc2_7_timur_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>
+                          <b>8. Belt Conveyor</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Rubber Skirt</td>
+                        <td className='align-middle'>No wear and No leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiSkirt'
+                            name='crbciiSkirt'
+                            className="large-checkbox"
+                            checked={data.crbc2_8_skirt}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_8_skirt ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Inlet Chute</td>
+                        <td className='align-middle'>No wear and No leakage</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiChute'
+                            name='crbciiChute'
+                            className="large-checkbox"
+                            checked={data.crbc2_8_chute}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_8_chute ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Belt Condition</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiCondition'
+                            name='crbciiCondition'
+                            className="large-checkbox"
+                            checked={data.crbc2_8_condition}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_8_condition ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Belt Joint</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiJoint'
+                            name='crbciiJoint'
+                            className="large-checkbox"
+                            checked={data.crbc2_8_joint}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_8_joint ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Impact Roller</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiImpact'
+                            name='crbciiImpact'
+                            className="large-checkbox"
+                            checked={data.crbc2_8_impact}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_8_impact ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Carry Roller</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiCarry'
+                            name='crbciiCarry'
+                            className="large-checkbox"
+                            checked={data.crbc2_8_carry}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_8_carry ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td className='align-middle'>Return Roller</td>
+                        <td className='align-middle'>Good</td>
+                        <td className='p-0 align-middle text-center'>
+                          <Form.Check
+                            type="checkbox"
+                            id='crbciiReturn'
+                            name='crbciiReturn'
+                            className="large-checkbox"
+                            checked={data.crbc2_8_return}
+                          /></td>
+                        <td className='align-middle'><b>{data.crbc2_8_return ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
+                        <td colSpan={4} className='p-0'><Form.Control
+                          style={{ height: '100px' }} type="text" id='crRemark' name="crRemark" placeholder=""
+                          value={data.cr_remark}
+                        /></td>
+                      </tr>
+                      </tbody>
                   </Table>
                 </Form>
               </Col>

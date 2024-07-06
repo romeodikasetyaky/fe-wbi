@@ -5,7 +5,7 @@ import { Button, Card, Col, Form, Row } from 'react-bootstrap';
 import { useRouter } from 'next/navigation';
 import DataTable from 'react-data-table-component';
 
-const RecSatuDataTable = () => {
+const NarSatuADataTable = () => {
   const router = useRouter();
   const [listData, setListData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -13,10 +13,10 @@ const RecSatuDataTable = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const fetchListRecSatu = async () => {
+    const fetchListNarSatuA = async () => {
       setLoading(true);
       try {
-        const list = await fetch(process.env.NEXT_PUBLIC_API_URL + 'area-rec1', {
+        const list = await fetch(process.env.NEXT_PUBLIC_API_URL + 'area-nar1a', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -47,10 +47,10 @@ const RecSatuDataTable = () => {
         setLoading(false);
       }
     };
-    fetchListRecSatu();
+    fetchListNarSatuA();
   }, []);
 
-  const searchRecSatu = (e) => {
+  const searchNarSatuA = (e) => {
     const text = e.target.value.toLowerCase();
     setSearchQuery(text);
     const filtered = text === "" ? listData : listData.filter(
@@ -117,8 +117,8 @@ const RecSatuDataTable = () => {
     },
   ]
 
-  const handleButtonClick = (rec1Id) => {
-    router.push(`/details/rec1/${rec1Id}`);
+  const handleButtonClick = (nar1aId) => {
+    router.push(`/details/nar1a/${nar1aId}`);
   };
 
   return (
@@ -128,21 +128,27 @@ const RecSatuDataTable = () => {
           <Card style={{ width: '36rem' }}>
             <Card.Header>
               <div className="py-1 d-flex justify-content-between align-items-center"> 
-              <h3 className="mb-0 "><b>Reclaimer NAR 1</b></h3>
+              <h3 className="mb-0"><b>Crusher Limestone NAR 1</b></h3>
               <Form className="d-flex align-items-center">
                 <Form.Control type="text" placeholder="Search" className="ml-3" 
                   value={searchQuery}
-                  onChange={searchRecSatu}
+                  onChange={searchNarSatuA}
                 />
               </Form>
               </div>
               <table width= '60%' font-size= '20px'>
-              <tbody>    
+                <tbody>    
                     <tr>
-                        <td className="mb-0">&#10625; 313-RE1</td>
-                        <td className="mb-0">&#10625; 313-BC1</td>
+                        <td className="mb-0">&#10625; 213-BC3</td>
+                        <td className="mb-0">&#10625; 213-BC5</td>
+                        <td className="mb-0"></td>
                     </tr>
-                    </tbody>
+                    <tr>
+                        <td className="mb-0">&#10625; 213-BC4</td>
+                        <td className="mb-0">&#10625; 213-ST1</td>
+                        <td className="mb-0"></td>
+                    </tr>
+                    </tbody>  
                 </table>
             </Card.Header>
             {loading ? (
@@ -171,4 +177,4 @@ const RecSatuDataTable = () => {
   );
 }
 
-export default RecSatuDataTable;
+export default NarSatuADataTable;

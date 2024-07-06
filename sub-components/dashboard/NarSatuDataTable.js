@@ -94,25 +94,26 @@ const NarSatuDataTable = () => {
       name: <b>No</b>,
       selector: (row) => row.number,
       sortable: true,
-      width: '150px',
+      width: '75px',
     },
     {
       name: <b>Tanggal</b>,
       selector: (row) => row.tanggal,
       sortable: true,
-      width: '250px',
+      width: '150px',
     },
     {
       name: <b>Nama Inspektor</b>,
       selector: (row) => row.user_name,
       sortable: true,
+      width: '200px',
     },
     {
       name: <b>Details</b>,
       selector: (row) => <Button onClick={() => handleButtonClick(row.id)}>View</Button>,
       sortable: false,
       button: true,
-      width: '340px',
+      width: '150px',
     },
   ]
 
@@ -124,15 +125,30 @@ const NarSatuDataTable = () => {
     <>
       <Row className="mt-6">
         <Col md={12} xs={12}>
-          <Card>
-            <Card.Header className="bg-white py-4 d-flex justify-content-between align-items-center">
-              <h4 className="mb-0">Crusher Limestone Nar 1</h4>
+          <Card style={{ width: '36rem' }}>
+            <Card.Header>
+              <div className="py-1 d-flex justify-content-between align-items-center"> 
+              <h3 className="mb-0 "><b>Crusher Limestone NAR 1</b></h3>
               <Form className="d-flex align-items-center">
-                <Form.Control type="text" placeholder="Search" className="ml-3" 
+                <Form.Control type="text" placeholder="Search" className="ml-3" width={'50px'} 
                   value={searchQuery}
                   onChange={searchNarSatu}
                 />
               </Form>
+              </div>
+              <table width= '90%' font-size= '20px'>
+              <tbody>    
+                    <tr>
+                        <td className="mb-0">&#10625; 213-WQ1</td>
+                        <td className="mb-0">&#10625; 213-BC1</td>
+                        <td className="mb-0">&#10625; 213-BC2</td>
+                    </tr>
+                    <tr>
+                        <td className="mb-0">&#10625; 213-HC1</td>
+                        <td className="mb-0">&#10625; 213-MS1</td>
+                    </tr>
+                    </tbody>    
+                </table>
             </Card.Header>
             {loading ? (
               <div className='d-flex justify-content-center mt-3'>

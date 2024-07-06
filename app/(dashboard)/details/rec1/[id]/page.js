@@ -1,13 +1,13 @@
 'use client';
 
-import { UseEffect, UseState } from "react";
+import { useEffect, useState } from "react";
 import { Col, Container, Form, Row, Table } from "react-bootstrap";
 
 const detailsRecSatu = ({ params }) => {
   const recId = params.id;
-  const [data, setData] = UseState([]);
+  const [data, setData] = useState([]);
 
-  UseEffect(() => {
+  useEffect(() => {
     const detailRecSatu = async () => {
       const recsatu = await fetch(process.env.NEXT_PUBLIC_API_URL + 'rec1/' + recId, {
         method: 'GET',
@@ -40,12 +40,11 @@ const detailsRecSatu = ({ params }) => {
                     <thead>
                       <tr>
                         <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '7%' }} className='text-center'><b>No</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>HAC</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Task</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Standard</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '10%' }} className='text-center'><b>Actual Value</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Remark</b></th>
-                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff' }} className='text-center'><b>Status</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '7%' }} className='text-center'><b>HAC</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '37%' }} className='text-center'><b>Task</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '27%' }} className='text-center'><b>Standard</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '7%' }} className='text-center'><b>Actual Value</b></th>
+                        <th style={{ backgroundColor: '#F5333C', color: '#ffffff', width: '15%' }} className='text-center'><b>Status</b></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -75,10 +74,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_1_rotating_part}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiSgRotatingParts_r' name="reiSgRotatingParts_r" placeholder=""
-                          value={data.re1_1_rotating_part_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.re1_1_rotating_part ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -92,10 +87,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_1_hsc}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiSgHSC_r' name="reiSgHSC_r" placeholder=""
-                          value={data.re1_1_hsc_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_1_hsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -109,10 +100,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_1_lsc}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiSgLSC_r' name="reiSgLSC_r" placeholder=""
-                          value={data.re1_1_lsc_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_1_lsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -126,10 +113,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_1_remaining_guarding}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiSgRG_r' name="reiSgRG_r" placeholder=""
-                          value={data.re1_1_remaining_guarding_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_1_remaining_guarding ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       {/* REDUCER */}
@@ -154,22 +137,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_2_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRmNoise_r' name="reiShRmNoise_r" placeholder=""
-                          value={data.re1_2_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_2_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 60⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='reiShRmTemp' name="reiShRmTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='reiShRmTemp' name="reiShRmTemp" placeholder=""
                           value={data.re1_2_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRmTemp_r' name="reiShRmTemp_r" placeholder=""
-                          value={data.re1_2_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_2_temp) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -184,10 +159,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_2_seal}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRmSeal_r' name="reiShRmSeal_r" placeholder=""
-                          value={data.re1_2_seal_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_2_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -201,10 +172,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_2_level_oil}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRmLevelOli_r' name="reiShRmLevelOli_r" placeholder=""
-                          value={data.re1_2_level_oil_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_level_oil ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -218,10 +185,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_2_coupling}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRmCoupling_r' name="reiShRmCoupling_r" placeholder=""
-                          value={data.re1_2_coupling_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_2_coupling ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -234,10 +197,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_2_temp_b}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRmTempBearing_r' name="reiShRmTempBearing_r" placeholder=""
-                          value={data.re1_2_temp_b_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_2_temp_b) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -256,10 +215,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_3_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRnNoise_r' name="reiShRnNoise_r"placeholder=""
-                          value={data.re1_3_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_3_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -272,10 +227,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_3_temp}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRnTemp_r' name="reiShRnTemp_r" placeholder=""
-                          value={data.re1_3_temp}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_3_temp) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -290,25 +241,19 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_3_seal}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRnSeal_r' name="reiShRnSeal_r" placeholder=""
-                          value={data.re1_3_seal_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_3_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
-
                       </tr>
                       <tr>
                         <td className='align-middle'>Level Oli</td>
                         <td className='align-middle'>Cukup (Normal)</td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='reiShRnLevelOli'
-                          name='reiShRnLevelOli'placeholder=""
-                          value={data.re1_3_level_oli}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRnLevelOli_r' name="reiShRnLevelOli_r" placeholder=""
-                          value={data.re1_3_level_oli_rm}
-                        /></td>
+                        <td className='p-0 align-middle text-center'>
+                        <Form.Check
+                            type="checkbox"
+                            id='reiShRnLevelOli'
+                            name='reiShRnLevelOli'
+                            className="large-checkbox"
+                            checked={data.re1_3_level_oli}
+                          /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_3_level_oli_rm) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -322,10 +267,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_3_coupling}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRnCoupling_r' name="reiShRnCoupling_r" placeholder=""
-                          value={data.re1_3_coupling_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_3_coupling ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -333,12 +274,8 @@ const detailsRecSatu = ({ params }) => {
                         <td className='align-middle'>Temperatur Bearing</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='reiShRnTempBearing' name="reiShRnTempBearing" placeholder=""
+                          style={{ height: '50px' }} type="number" id='reiShRnTempBearing' name="reiShRnTempBearing" placeholder=""
                           value={data.re1_3_temp_b}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiShRnTempBearing' name="reiShRnTempBearing" placeholder=""
-                          value={data.re1_3_temp_b_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_3_temp_b) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
@@ -358,22 +295,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_4_temp_fix}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiStTempFix_r' name="reiStTempFix_r" placeholder=""
-                          value={data.re1_4_temp_fix_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_4_temp_fix) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Baering Free Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='reiStTempFree' name="reiStTempFree" placeholder=""
+                          style={{ height: '50px' }} type="number" id='reiStTempFree' name="reiStTempFree" placeholder=""
                           value={data.re1_4_temp_free}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiStTempFree_r' name="reiStTempFree_r"placeholder=""
-                          value={data.re1_4_temp_free_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.wq1_5_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -388,10 +317,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_4_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiStNoise_r' name="reiStNoise_r" placeholder=""
-                          value={data.re1_4_noise_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_4_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
@@ -410,10 +335,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_5_red_boogie}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiBmRed_r' name="reiBmRed_r" placeholder=""
-                          value={data.re1_5_red_boogie_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_5_red_boogie) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -427,10 +348,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_5_guide}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiBmGuide_r' name="reiBmGuide_r" placeholder=""
-                          value={data.re1_5_guide_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_5_guide ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -449,10 +366,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_6_red_boogie}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiBnRed_r' name="reiBnRed_r" placeholder=""
-                          value={data.re1_6_red_boogie_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_6_red_boogie) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -466,10 +379,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_6_guide}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiBnGuide_r' name="reiBnGuide_r" placeholder=""
-                          value={data.re1_6_guide_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_6_guide ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -488,10 +397,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_7_hanger}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiLinkHanger_r' name="reiLinkHanger_r" placeholder=""
-                          value={data.re1_7_hanger_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_7_hanger ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -504,11 +409,7 @@ const detailsRecSatu = ({ params }) => {
                             name='reiLinkLock'
                             className="large-checkbox"
                             checked={data.re1_7_lock}
-                          /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiLinkLock_r' name="reiLinkLock_r" placeholder=""
-                          value={data.re1_7_lock_rm}
-                        /></td>
+                            /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_7_lock ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -522,19 +423,15 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_7_scrapper}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='reiLinkScrapper_r' name="reiLinkScrapper_r" placeholder=""
-                          value={data.re1_7_scrapper_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_7_scrapper ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
 
                       {/* BC1 */}
                       <tr>
-                        <td rowSpan={73} className='text-center align-middle'>
+                        <td rowSpan={72} className='text-center align-middle'>
                           <span>2</span>
                         </td>
-                        <td rowSpan={73} className='text-center align-middle rotate-text'>
+                        <td rowSpan={72} className='text-center align-middle rotate-text'>
                           <b>NR.313-BC1</b>
                         </td>
                       </tr>
@@ -555,10 +452,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_1_rotating_part}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSgRotatingParts_r' name="rebciSgRotatingParts_r" placeholder=""
-                          value={data.rebc1_1_rotating_part_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_1_rotating_part ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -572,10 +465,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_1_hsc}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSgHSC_r' name="rebciSgHSC_r" placeholder=""
-                          value={data.rebc1_1_hsc_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.rebc1_1_hsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -589,10 +478,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_1_lsc}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSgLSC_r' name="rebciSgLSC_r" placeholder=""
-                          value={data.re1_1_lsc_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.rebc1_1_lsc ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -606,10 +491,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_1_csb}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSgCSB_r' name="rebciSgCSB_r" placeholder=""
-                          value={data.rebc1_1_csb_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.rebc1_1_csb ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -623,10 +504,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_1_remaining_guarding}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSgRG_r' name="rebciSgRG_r" placeholder=""
-                          value={data.rebc1_1_remaining_guarding_rm}
-                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.rebc1_1_remaining_guarding ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -645,10 +522,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_2_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadLagging_r' name="rebciHeadLagging_r" placeholder=""
-                          value={data.rebc1_2_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_2_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -662,10 +535,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_2_primary}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadPrimary_r' name="rebciHeadPrimary_r" placeholder=""
-                          value={data.rebc1_2_primary_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_2_primary ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -679,10 +548,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_2_secondary}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadSecondary_r' name="rebciHeadSecondary_r" placeholder=""
-                          value={data.rebc1_2_secondary_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_2_secondary ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -701,22 +566,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_2_fix_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadFixNoise_r' name="rebciHeadFixNoise_r" placeholder=""
-                          value={data.rebc1_2_fix_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_2_fix_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciHeadFixTemp' name="rebciHeadFixTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciHeadFixTemp' name="rebciHeadFixTemp" placeholder=""
                           value={data.rebc1_2_fix_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadFixTemp_r' name="rebciHeadFixTemp_r"placeholder=""
-                          value={data.rebc1_2_fix_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_2_fix_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -736,22 +593,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_2_free_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadFreeNoise_r' name="rebciHeadFreeNoise_r" placeholder=""
-                          value={data.rebc1_2_free_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_2_free_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciHeadFreeTemp' name="rebciHeadFreeTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciHeadFreeTemp' name="rebciHeadFreeTemp" placeholder=""
                           value={data.rebc1_2_free_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadFreeTemp_r' name="rebciHeadFreeTemp_r"placeholder=""
-                          value={data.rebc1_2_free_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_2_fix_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -771,22 +620,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_2_red_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadRedNoise_r' name="rebciHeadRedNoise_r" placeholder=""
-                          value={data.rebc1_2_red_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_2_red_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciHeadRedTemp' name="rebciHeadRedTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciHeadRedTemp' name="rebciHeadRedTemp" placeholder=""
                           value={data.rebc1_2_red_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadRedTemp_r' name="rebciHeadRedTemp_r"placeholder=""
-                          value={data.rebc1_2_red_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_2_red_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -801,10 +642,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_2_red_seal}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadRedSeal_r' name="rebciHeadRedSeal_r" placeholder=""
-                          value={data.rebc1_2_red_seal_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_2_red_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -818,10 +655,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_2_red_oli}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadRedOli_r' name="rebciHeadRedOli_r" placeholder=""
-                          value={data.rebc1_2_red_oli_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_2_red_oli ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -835,10 +668,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_2_red_coupling}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciHeadRedCoupling_r' name="rebciHeadRedCoupling_r" placeholder=""
-                          value={data.rebc1_2_red_coupling_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_2_red_coupling ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -857,10 +686,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_3_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSnubLagging_r' name="rebciSnubLagging_r" placeholder=""
-                          value={data.rebc1_3_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_3_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -879,22 +704,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_3_barat_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSnubBaratNoise_r' name="rebciSnubBaratNoise_r" placeholder=""
-                          value={data.rebc1_3_barat_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_3_barat_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciSnubBaratTemp' name="rebciSnubBaratTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciSnubBaratTemp' name="rebciSnubBaratTemp" placeholder=""
                           value={data.rebc1_3_barat_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSnubBaratTemp_r' name="rebciSnubBaratTemp_r"placeholder=""
-                          value={data.rebc1_3_barat_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_3_barat_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -914,22 +731,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_3_timur_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSnubTimurNoise_r' name="rebciSnubTimurNoise_r" placeholder=""
-                          value={data.rebc1_3_timur_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_3_timur_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciSnubTimurTemp' name="rebciSnubTimurTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciSnubTimurTemp' name="rebciSnubTimurTemp" placeholder=""
                           value={data.rebc1_3_timur_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSnubTimurTemp_r' name="rebciSnubTimurTemp_r"placeholder=""
-                          value={data.rebc1_3_timur_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_3_timur_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -949,10 +758,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_4_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciUtaraLagging_r' name="rebciUtaraLagging_r" placeholder=""
-                          value={data.rebc1_4_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_4_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -971,22 +776,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_4_barat_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciUtaraBaratNoise_r' name="rebciUtaraBaratNoise_r" placeholder=""
-                          value={data.rebc1_4_barat_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_4_barat_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciUtaraBaratTemp' name="rebciUtaraBaratTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciUtaraBaratTemp' name="rebciUtaraBaratTemp" placeholder=""
                           value={data.rebc1_4_barat_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciUtaraBaratTemp_r' name="rebciUtaraBaratTemp_r"placeholder=""
-                          value={data.rebc1_4_barat_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_4_barat_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1006,22 +803,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_4_timur_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciUtaraTimurNoise_r' name="rebciUtaraTimurNoise_r" placeholder=""
-                          value={data.rebc1_4_timur_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_4_timur_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciUtaraTimurTemp' name="rebciUtaraTimurTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciUtaraTimurTemp' name="rebciUtaraTimurTemp" placeholder=""
                           value={data.rebc1_4_timur_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciUtaraTimurTemp_r' name="rebciUtaraTimurTemp_r"placeholder=""
-                          value={data.rebc1_4_timur_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_4_timur_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1041,10 +830,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_5_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSelatanLagging_r' name="rebciSelatanLagging_r" placeholder=""
-                          value={data.rebc1_5_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_5_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1063,22 +848,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_5_barat_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSelatanBaratNoise_r' name="rebciSelatanBaratNoise_r" placeholder=""
-                          value={data.rebc1_5_barat_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_5_barat_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciSelatanBaratTemp' name="rebciSelatanBaratTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciSelatanBaratTemp' name="rebciSelatanBaratTemp" placeholder=""
                           value={data.rebc1_5_barat_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSelatanBaratTemp_r' name="rebciSelatanBaratTemp_r"placeholder=""
-                          value={data.rebc1_5_barat_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_5_barat_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1098,22 +875,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_5_timur_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSelatanTimurNoise_r' name="rebciSelatanTimurNoise_r" placeholder=""
-                          value={data.rebc1_5_timur_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_5_timur_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciSelatanTimurTemp' name="rebciSelatanTimurTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciSelatanTimurTemp' name="rebciSelatanTimurTemp" placeholder=""
                           value={data.rebc1_5_timur_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSelatanTimurTemp_r' name="rebciSelatanTimurTemp_r"placeholder=""
-                          value={data.rebc1_5_timur_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_5_timur_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1133,10 +902,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_6_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTakeLagging_r' name="rebciTakeLagging_r" placeholder=""
-                          value={data.rebc1_6_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_6_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1155,22 +920,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_6_barat_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTakeBaratNoise_r' name="rebciTakeBaratNoise_r" placeholder=""
-                          value={data.rebc1_6_barat_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_6_barat_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciTakeBaratTemp' name="rebciTakeBaratTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciTakeBaratTemp' name="rebciTakeBaratTemp" placeholder=""
                           value={data.rebc1_6_barat_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTakeBaratTemp_r' name="rebciTakeBaratTemp_r"placeholder=""
-                          value={data.rebc1_6_barat_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_6_barat_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1190,22 +947,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_6_timur_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTakeTimurNoise_r' name="rebciTakeTimurNoise_r" placeholder=""
-                          value={data.rebc1_6_timur_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_6_timur_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciTakeTimurTemp' name="rebciTakeTimurTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciTakeTimurTemp' name="rebciTakeTimurTemp" placeholder=""
                           value={data.rebc1_6_timur_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTakeTimurTemp_r' name="rebciTakeTimurTemp_r"placeholder=""
-                          value={data.rebc1_6_timur_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_6_timur_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1225,10 +974,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_7_lagging}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTailLagging_r' name="rebciTailLagging_r" placeholder=""
-                          value={data.rebc1_7_lagging_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_7_lagging ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1242,10 +987,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_7_vs}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTailVs_r' name="rebciTailVs_r" placeholder=""
-                          value={data.rebc1_7_vs_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_7_vs ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1264,22 +1005,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_7_barat_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTailBaratNoise_r' name="rebciTailBaratNoise_r" placeholder=""
-                          value={data.rebc1_7_barat_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_7_barat_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciTailBaratTemp' name="rebciTailBaratTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciTailBaratTemp' name="rebciTailBaratTemp" placeholder=""
                           value={data.rebc1_7_barat_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTailBaratTemp_r' name="rebciTailBaratTemp_r"placeholder=""
-                          value={data.rebc1_7_barat_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_7_barat_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1299,22 +1032,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_7_timur_noise}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTailTimurNoise_r' name="rebciTailTimurNoise_r" placeholder=""
-                          value={data.rebc1_7_timur_noise_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_7_timur_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Temperatur</td>
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="number" id='rebciTailTimurTemp' name="rebciTailTimurTemp" placeholder=""
+                          style={{ height: '50px' }} type="number" id='rebciTailTimurTemp' name="rebciTailTimurTemp" placeholder=""
                           value={data.rebc1_7_timur_temp}
-                        /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciTailTimurTemp_r' name="rebciTailTimurTemp_r"placeholder=""
-                          value={data.rebc1_7_timur_temp_rm}
                         /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.rebc1_7_timur_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
@@ -1334,10 +1059,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_8_skirt}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciSkirt_r' name="rebciSkirt_r" placeholder=""
-                          value={data.rebc1_8_skirt_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_8_skirt ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1351,10 +1072,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_8_chute}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciChute_r' name="rebciChute_r" placeholder=""
-                          value={data.rebc1_8_chute_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_8_chute ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1368,10 +1085,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_8_condition}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciCondition_r' name="rebciCondition_r" placeholder=""
-                          value={data.rebc1_8_condition_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_8_condition ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1385,10 +1098,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_8_joint}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciJoint_r' name="rebciJoint_r" placeholder=""
-                          value={data.rebc1_8_joint_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_8_joint ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1402,10 +1111,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_8_impact}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciImpact_r' name="rebciImpact_r" placeholder=""
-                          value={data.rebc1_8_impact_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_8_impact ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1419,10 +1124,6 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_8_carry}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciCarry_r' name="rebciCarry_r" placeholder=""
-                          value={data.rebc1_8_carry_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_8_carry ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1436,11 +1137,14 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.rebc1_8_return}
                           /></td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '65px' }} type="text" id='rebciReturn_r' name="rebciReturn_r" placeholder=""
-                          value={data.rebc1_8_return_rm}
-                        /></td>
                         <td className='align-middle'><b>{data.rebc1_8_return ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
+                        <td colSpan={4} className='p-0'><Form.Control
+                          style={{ height: '100px' }} type="number" id='reRemark' name="reRemark" placeholder=""
+                          value={data.re_remark}
+                        /></td>
                       </tr>
                     </tbody>
                   </Table>

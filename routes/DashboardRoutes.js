@@ -25,22 +25,22 @@ import { v4 as uuid } from 'uuid';
 
 export const DashboardMenu = [
 	{
-		id: uuid(),
-		title: 'Dashboard',
-		icon: 'home',
+		id: uuid(1),
+		title: 'Archive',
+		icon: 'database',
 		link: '/'
 	},
 	{
 		id: uuid(),
 		title: 'Route',
-		icon: 'layout',
+		icon: 'check-circle',
 		link: '/route'
 	},
 	{
 		id: uuid(),
 		title: 'Log in',
 		icon: 'log-in',
-		link: '/authentication/sign-in'
+		link: '/authentication/sign-in',
 	},
 ];
 

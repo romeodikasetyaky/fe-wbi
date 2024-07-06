@@ -90,14 +90,14 @@ const SignIn = () => {
           <Card.Body className="p-6">
             <div className="mb-4">
               <Link href="/" className='mb-3'><Image src="/images/Logo_Solusi_Bangun_Indonesia.svg.png" 
-                className="mb-5" alt="" width={250} height={50}/></Link>
-              <h3 className="mb-6 fw-bold">Sign In</h3>
+                className="mb-5 align-center" alt="" width={250} height={50}/></Link>
+              <h3 className="mb-6 fw-bold">Log In</h3>
             </div>
             {hasMounted &&
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="email">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="budiono@gmail.com" required="" 
+                  <Form.Control type="email" placeholder="" required="" 
                     name="email"
                     value={emailOrPhone}
                     onChange={(e) => setEmailOrPhone(e.target.value)}
@@ -106,7 +106,7 @@ const SignIn = () => {
 
                 <Form.Group className="mb-3" controlId="password">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="**************" required="" 
+                  <Form.Control type="password" placeholder="" required="" 
                     name="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}

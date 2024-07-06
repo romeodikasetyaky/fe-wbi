@@ -7,6 +7,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 // import required data files`
 import NarSatuDataTable from "sub-components/dashboard/NarSatuDataTable";
 import RecSatuDataTable from "sub-components/dashboard/RecSatuDataTable";
+import NarSatuADataTable from "sub-components/dashboard/NarSatuADataTable";
 
 const Home = () => {
     return (
@@ -29,8 +30,17 @@ const Home = () => {
                             </div>
                         </div>
                     </Col>
-                    <NarSatuDataTable/>
-                    <RecSatuDataTable/>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width='545px'><NarSatuDataTable/></td>
+                                <td width='545px'><NarSatuADataTable/></td>
+                            </tr>
+                            <tr>
+                                <td><RecSatuDataTable/></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </Row>
 
             </Container>
