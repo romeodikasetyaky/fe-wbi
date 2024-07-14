@@ -360,6 +360,13 @@ const detailsNarSatu = ({ params }) => {
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_6_cleanliness ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
+                      <tr>
+                        <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
+                        <td colSpan={4} className='p-0'><Form.Control
+                          style={{ height: '100px' }} type="text" id='wqiRm' name="wqiRm" placeholder=""
+                          value={data.wq1_remark}
+                        /></td>
+                      </tr>
                       {/* END WQ1 */}
 
                       {/* HC1 */}
@@ -766,6 +773,13 @@ const detailsNarSatu = ({ params }) => {
                           /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_9_cleanliness ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
+                      </tr>
+                      <tr>
+                        <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
+                        <td colSpan={4} className='p-0'><Form.Control
+                          style={{ height: '100px' }} type="text" id='hciRm' name="hciRm" placeholder=""
+                          value={data.hc1_remark}
+                        /></td>
                       </tr>
                       {/* END HC1 */}
 
@@ -1482,6 +1496,13 @@ const detailsNarSatu = ({ params }) => {
                           /></td>
                         <td className='align-middle'><b>{data.crbc1_8_return ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
+                      <tr>
+                        <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
+                        <td colSpan={4} className='p-0'><Form.Control
+                          style={{ height: '100px' }} type="text" id='crbciRm' name="crbciRm" placeholder=""
+                          value={data.bc1_remark}
+                        /></td>
+                      </tr>
                       {/* MS1 */}
                       <tr>
                         <td rowSpan={39} className='text-center align-middle'>
@@ -1892,6 +1913,13 @@ const detailsNarSatu = ({ params }) => {
                             checked={data.crms1_8_cleanliness}
                           /></td>
                         <td className='align-middle'><b>{data.crms1_8_cleanliness ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
+                        <td colSpan={4} className='p-0'><Form.Control
+                          style={{ height: '100px' }} type="text" id='crmsiRm' name="crmsiRm" placeholder=""
+                          value={data.ms1_remark}
+                        /></td>
                       </tr>
                       {/* BC2 */}
                       <tr>
@@ -2609,8 +2637,8 @@ const detailsNarSatu = ({ params }) => {
                       <tr>
                         <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
                         <td colSpan={4} className='p-0'><Form.Control
-                          style={{ height: '100px' }} type="text" id='crRemark' name="crRemark" placeholder=""
-                          value={data.cr_remark}
+                          style={{ height: '100px' }} type="text" id='crbciiRemark' name="crbciiRemark" placeholder=""
+                          value={data.bc2_remark}
                         /></td>
                       </tr>
                       </tbody>

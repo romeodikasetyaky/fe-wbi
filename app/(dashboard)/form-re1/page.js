@@ -114,6 +114,7 @@ const R1 = () => {
   const [rebciReturn, setrebciReturn] = useState('');
   
   const [reRemark, setreRemark] = useState('');
+  const [rebciRemark, setrebciRemark] = useState('');
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -204,7 +205,8 @@ const R1 = () => {
         rebc1_8_carry: rebciCarry,
         rebc1_8_return: rebciReturn,
 
-        re_remark: reRemark,
+        re1_remark: reRemark,
+        rebc1_remark: rebciRemark,
       }),
     });
 
@@ -610,6 +612,16 @@ const R1 = () => {
                             className="large-checkbox"
                             checked={reiLinkScrapper}
                             onChange={(e) => setreiLinkScrapper(e.target.checked)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={2} className='text-center align-middle'>
+                          <b>Remark</b>
+                        </td>
+                      <td colSpan={3} className='p-0'><Form.Control 
+                          style={{ height: '100px'}} type="text" id='reRemark' name="reRemark" placeholder="" 
+                          value={reRemark}
+                          onChange={(e) => setreRemark(e.target.value)}
                           /></td>
                       </tr>
                        {/* BC1 */}
@@ -1329,9 +1341,9 @@ const R1 = () => {
                           <b>Remark</b>
                         </td>
                       <td colSpan={3} className='p-0'><Form.Control 
-                          style={{ height: '100px'}} type="text" id='reRemark' name="reRemark" placeholder="" 
-                          value={reRemark}
-                          onChange={(e) => setreRemark(e.target.value)}
+                          style={{ height: '100px'}} type="text" id='rebciRemark' name="rebciRemark" placeholder="" 
+                          value={rebciRemark}
+                          onChange={(e) => setrebciRemark(e.target.value)}
                           /></td>
                       </tr>
                     </tbody>

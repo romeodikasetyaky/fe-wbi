@@ -205,7 +205,10 @@ const N1a = () => {
   const [crstKiriOli, setcrstKiriOli] = useState('');
   const [crstKiriClean, setcrstKiriClean] = useState('');
   // Remark
-  const [crARemark, setcrARemark] = useState('');
+  const [stRemark, setstRemark] = useState('');
+  const [crbcvRemark, setcrbcvRemark] = useState('');
+  const [crbcivRemark, setcrbcivRemark] = useState('');
+  const [crbciiiRemark, setcrbciiiRemark] = useState('');
 
    
   const handleSubmit = async (e) => {
@@ -278,6 +281,7 @@ const N1a = () => {
         crbc3_10_impact: crbciiiImpact,
         crbc3_10_carry: crbciiiCarry,
         crbc3_10_return: crbciiiReturn,
+        bc3_remark: crbciiiRemark,
 
         // 213-BC4
         crbc4_1_rotating_part: crbcivSgRotatingParts,
@@ -330,6 +334,7 @@ const N1a = () => {
         crbc4_8_impact: crbcivImpact,
         crbc4_8_carry: crbcivCarry,
         crbc4_8_return: crbcivReturn,
+        bc4_remark: crbcivRemark,
 
         // 213-BC5
         crbc5_1_rotating_part: crbcvSgRotatingParts,
@@ -378,6 +383,7 @@ const N1a = () => {
         crbc5_6_impact: crbcvImpact,
         crbc5_6_carry: crbcvCarry,
         crbc5_6_return: crbcvReturn,
+        bc5_remark: crbcvRemark,
 
         //213-ST1
         crst1_1_rotating_part: crstRotParts,
@@ -391,7 +397,7 @@ const N1a = () => {
         crst1_3_seal: crstKiriSeal,
         crst1_3_oli: crstKiriOli,
         crst1_3_cleanliness: crstKiriClean,
-        cra_remark: crARemark,
+        st1_remark: stRemark,
       }),
     });
 
@@ -1234,6 +1240,17 @@ const N1a = () => {
                             onChange={(e) => setcrbciiiReturn(e.target.checked)}
                           /></td>
                       </tr>
+                      <tr>
+                        <td colSpan={2} className='text-center align-middle'>
+                          <b>Remark</b>
+                        </td>
+                        <td colSpan={3} className='p-0'><Form.Control 
+                          style={{ height: '100px'}} type="text" id='crbciiiRemark' name="crbciiiRemark" placeholder="" 
+                          value={crbciiiRemark}
+                          onChange={(e) => setcrbciiiRemark(e.target.value)}
+                          /></td>
+                      </tr>
+                      
                     <tr>
                         <td rowSpan={72} className='text-center align-middle'>
                           <span>2</span>
@@ -1946,6 +1963,16 @@ const N1a = () => {
                           /></td>
                       </tr>
                       <tr>
+                        <td colSpan={2} className='text-center align-middle'>
+                          <b>Remark</b>
+                        </td>
+                        <td colSpan={3} className='p-0'><Form.Control 
+                          style={{ height: '100px'}} type="text" id='crbcivRemark' name="crbcivRemark" placeholder="" 
+                          value={crbcivRemark}
+                          onChange={(e) => setcrbcivRemark(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
                         <td rowSpan={63} className='text-center align-middle'>
                           <span>3</span>
                         </td>
@@ -2592,6 +2619,16 @@ const N1a = () => {
                           /></td>
                       </tr>
                       <tr>
+                        <td colSpan={2} className='text-center align-middle'>
+                          <b>Remark</b>
+                        </td>
+                        <td colSpan={3} className='p-0'><Form.Control 
+                          style={{ height: '100px'}} type="text" id='crbcvRemark' name="crbcvRemark" placeholder="" 
+                          value={crbcvRemark}
+                          onChange={(e) => setcrbcvRemark(e.target.value)}
+                          /></td>
+                      </tr>
+                      <tr>
                         <td rowSpan={15} className='text-center align-middle'>
                           <span>4</span>
                         </td>
@@ -2754,9 +2791,9 @@ const N1a = () => {
                           <b>Remark</b>
                         </td>
                         <td colSpan={3} className='p-0'><Form.Control 
-                          style={{ height: '100px'}} type="text" id='crARemark' name="crARemark" placeholder="" 
-                          value={crARemark}
-                          onChange={(e) => setcrARemark(e.target.value)}
+                          style={{ height: '100px'}} type="text" id='stRemark' name="stRemark" placeholder="" 
+                          value={stRemark}
+                          onChange={(e) => setstRemark(e.target.value)}
                           /></td>
                       </tr>
                     </tbody>

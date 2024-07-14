@@ -425,6 +425,13 @@ const detailsRecSatu = ({ params }) => {
                           /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_7_scrapper ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
+                      <tr>
+                        <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
+                        <td colSpan={4} className='p-0'><Form.Control
+                          style={{ height: '100px' }} type="text" id='reRemark' name="reRemark" placeholder=""
+                          value={data.re1_remark}
+                        /></td>
+                      </tr>
 
                       {/* BC1 */}
                       <tr>
@@ -1142,8 +1149,8 @@ const detailsRecSatu = ({ params }) => {
                       <tr>
                         <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
                         <td colSpan={4} className='p-0'><Form.Control
-                          style={{ height: '100px' }} type="number" id='reRemark' name="reRemark" placeholder=""
-                          value={data.re_remark}
+                          style={{ height: '100px' }} type="text" id='rebciRemark' name="rebciRemark" placeholder=""
+                          value={data.rebc1_remark}
                         /></td>
                       </tr>
                     </tbody>

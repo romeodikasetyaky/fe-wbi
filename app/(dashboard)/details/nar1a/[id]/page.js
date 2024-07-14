@@ -840,6 +840,13 @@ const detailsNarSatuA = ({ params }) => {
                           /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.crbc3_10_return ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
+                      <tr>
+                        <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
+                        <td colSpan={4} className='p-0'><Form.Control
+                          style={{ height: '100px' }} type="text" id='crbciiiRemark' name="crbciiiRemark" placeholder=""
+                          value={data.bc3_remark}
+                        /></td>
+                      </tr>
                       
 
                       {/* BC4 */}
@@ -1556,6 +1563,13 @@ const detailsNarSatuA = ({ params }) => {
                         <td className='align-middle'><b>{data.crbc4_8_return ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
+                        <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
+                        <td colSpan={4} className='p-0'><Form.Control
+                          style={{ height: '100px' }} type="text" id='crbcivRemark' name="crbcivRemark" placeholder=""
+                          value={data.bc4_remark}
+                        /></td>
+                      </tr>
+                      <tr>
                       {/* BC5 */}
                         <td rowSpan={63} className='text-center align-middle'>
                           <span>3</span>
@@ -2204,6 +2218,14 @@ const detailsNarSatuA = ({ params }) => {
                         <td className='align-middle'><b>{data.crbc5_6_return ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
+                        <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
+                        <td colSpan={4} className='p-0'><Form.Control
+                          style={{ height: '100px' }} type="text" id='crbcvRemark' name="crbcvRemark" placeholder=""
+                          value={data.bc5_remark}
+                        /></td>
+                      </tr>
+                      
+                      <tr>
                       {/* St1 */}
                         <td rowSpan={15} className='text-center align-middle'>
                           <span>4</span>
@@ -2366,8 +2388,8 @@ const detailsNarSatuA = ({ params }) => {
                       <tr>
                         <td colSpan={2} className='align-middle text-center'><b>Remark</b></td>
                         <td colSpan={4} className='p-0'><Form.Control
-                          style={{ height: '100px' }} type="text" id='crARemark' name="crARemark" placeholder=""
-                          value={data.cra_remark}
+                          style={{ height: '100px' }} type="text" id='stRemark' name="stRemark" placeholder=""
+                          value={data.st1_remark}
                         /></td>
                       </tr>
                     </tbody>

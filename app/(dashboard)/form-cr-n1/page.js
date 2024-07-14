@@ -9,13 +9,13 @@ import withReactContent from 'sweetalert2-react-content';
 
 const N1 = () => {
   const [hasCookie, setHasCookie] = useState(false);
-  console.log(hasCookie);
-  const MySwal = withReactContent(Swal);
-  const router = useRouter();
+  console.log(hasCookie);  // memeriksa cookie
+  const MySwal = withReactContent(Swal); // inisialisasi sweet alert
+  const router = useRouter(); //navigasi
 
   useEffect(() => {
     const user_id = Cookies.get('user_id');
-
+    // mengambil cookie dari user_id
     if (user_id) {
       setHasCookie(true);
       
@@ -223,7 +223,11 @@ const N1 = () => {
   const [crbciiCarry, setcrbciiCarry] = useState('');
   const [crbciiReturn, setcrbciiReturn] = useState('');
   // Remark
-  const [crRemark, setcrRemark] = useState('');
+  const [crbciiRemark, setcrbciiRemark] = useState('');
+  const [wqiRm, setwqiRm] = useState('');
+  const [hciRm, sethciRm] = useState('');
+  const [crbciRm, setcrbciRm] = useState('');
+  const [crmsiRm, setcrmsiRm] = useState('');
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -259,6 +263,7 @@ const N1 = () => {
         wq1_5_temp: wqiBfTemp,
         wq1_5_tc: wqiBfTc,
         wq1_6_cleanliness: wqiCClean,
+        wq1_remark: wqiRm,
         
         hc1_1_rotating_part: hc1SgRotpart, // HC1
         hc1_1_hsc: hc1SgHsc,
@@ -287,6 +292,7 @@ const N1 = () => {
         hc1_8_noise: hci8noise,
         hc1_8_temp: hci8temp,
         hc1_9_cleanliness: hci9cesing,
+        hc1_remark: hciRm,
 
         // 213-BC1
         crbc1_1_rotating_part: crbciSgRotatingParts, 
@@ -339,6 +345,7 @@ const N1 = () => {
         crbc1_8_impact: crbciImpact,
         crbc1_8_carry: crbciCarry,
         crbc1_8_return: crbciReturn,
+        bc1_remark: crbciRm,
 
         // 213-MS1
         crms1_1_rotating_part: crmsiSgRot, 
@@ -371,6 +378,7 @@ const N1 = () => {
         crms1_8_condition: crmsiBeltCondition,
         crms1_8_joint: crmsiBeltjoint,
         crms1_8_cleanliness: crmsiBeltCleanliness,
+        ms1_remark: crmsiRm,
 
         // 213-BC2
         crbc2_1_rotating_part: crbciiSgRotatingParts,
@@ -423,7 +431,7 @@ const N1 = () => {
         crbc2_8_impact: crbciiImpact,
         crbc2_8_carry: crbciiCarry,
         crbc2_8_return: crbciiReturn,
-        cr_remark: crRemark,
+        bc2_remark: crbciiRemark,
       }),
     });
 
@@ -775,6 +783,16 @@ const N1 = () => {
                             className="large-checkbox"
                             checked={wqiCClean}
                             onChange={(e) => setwqiCClean(e.target.checked)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={2} className='text-center align-middle'>
+                          <b>Remark</b>
+                        </td>
+                        <td colSpan={3} className='p-0'><Form.Control 
+                          style={{ height: '100px'}} type="text" id='wqiRm' name="wqiRm" placeholder="" 
+                          value={wqiRm}
+                          onChange={(e) => setwqiRm(e.target.value)}
                           /></td>
                       </tr>
                       {/* END WQ1 */}
@@ -1155,6 +1173,16 @@ const N1 = () => {
                             className="large-checkbox"
                             checked={hci9cesing}
                             onChange={(e) => sethci9cesing(e.target.checked)}
+                          /></td>
+                      </tr>
+                      <tr>
+                        <td colSpan={2} className='text-center align-middle'>
+                          <b>Remark</b>
+                        </td>
+                        <td colSpan={3} className='p-0'><Form.Control 
+                          style={{ height: '100px'}} type="text" id='hciRm' name="hciRm" placeholder="" 
+                          value={hciRm}
+                          onChange={(e) => sethciRm(e.target.value)}
                           /></td>
                       </tr>
                       {/* END HC1 */}
@@ -1871,6 +1899,16 @@ const N1 = () => {
                             onChange={(e) => setcrbciReturn(e.target.checked)}
                           /></td>
                       </tr>
+                      <tr>
+                        <td colSpan={2} className='text-center align-middle'>
+                          <b>Remark</b>
+                        </td>
+                        <td colSpan={3} className='p-0'><Form.Control 
+                          style={{ height: '100px'}} type="text" id='crbciRm' name="crbciRm" placeholder="" 
+                          value={crbciRm}
+                          onChange={(e) => setcrbciRm(e.target.value)}
+                          /></td>
+                      </tr>
                       
                        {/* BC1 */}
                        <tr>
@@ -2283,6 +2321,18 @@ const N1 = () => {
                             onChange={(e) => setcrmsiBeltCleanliness(e.target.checked)}
                           /></td>
                         </tr>
+                        <tr>
+                        <td colSpan={2} className='text-center align-middle'>
+                          <b>Remark</b>
+                        </td>
+                        <td colSpan={3} className='p-0'><Form.Control 
+                          style={{ height: '100px'}} type="text" id='crmsiRm' name="crmsiRm" placeholder="" 
+                          value={crmsiRm}
+                          onChange={(e) => setcrmsiRm(e.target.value)}
+                          /></td>
+                      </tr>
+
+
                         <tr>
                         <td rowSpan={72} className='text-center align-middle'>
                           <span>5</span>
@@ -2999,9 +3049,9 @@ const N1 = () => {
                           <b>Remark</b>
                         </td>
                         <td colSpan={3} className='p-0'><Form.Control 
-                          style={{ height: '100px'}} type="text" id='crRemark' name="crRemark" placeholder="" 
-                          value={crRemark}
-                          onChange={(e) => setcrRemark(e.target.value)}
+                          style={{ height: '100px'}} type="text" id='crbciiRemark' name="crbciiRemark" placeholder="" 
+                          value={crbciiRemark}
+                          onChange={(e) => setcrbciiRemark(e.target.value)}
                           /></td>
                       </tr>
                     </tbody>
