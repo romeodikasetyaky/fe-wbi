@@ -2019,9 +2019,9 @@ const detailsNarSatuA = ({ params }) => {
                         <td className='align-middle'>&lt; 40⁰</td>
                         <td className='p-0'><Form.Control
                           style={{ height: '50px' }} type="number" id='crbcvSnubiiKiriTemp' name="crbcvSnubiiKiriTemp" placeholder=""
-                          value={data.crbc4_3_sel_temp}
+                          value={data.crbc5_4_kiri_temp}
                         /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc4_3_sel_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.crbc5_4_kiri_temp) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td colSpan={5} style={{ backgroundColor: 'var(--bs-gray-100)' }}>

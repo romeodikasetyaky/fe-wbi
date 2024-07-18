@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { Col, Container, Form, Row, Table } from "react-bootstrap";
-
+import { Col, Container, Form, Row, Button, Table } from "react-bootstrap";
 const detailsRecSatu = ({ params }) => {
   const recId = params.id;
   const [data, setData] = useState([]);
@@ -16,7 +15,7 @@ const detailsRecSatu = ({ params }) => {
           'Access-Control-Allow-Origin': '*'
         },
       });
-
+      
       const response = await recsatu.json();
       if (response.data != null) {
         setData(response.data);
@@ -172,7 +171,7 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_2_level_oil}
                           /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{data.wq1_2_level_oil ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{data.re1_2_level_oil ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Coupling</td>
@@ -254,7 +253,7 @@ const detailsRecSatu = ({ params }) => {
                             className="large-checkbox"
                             checked={data.re1_3_level_oli}
                           /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_3_level_oli_rm) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_3_level_oli) < 40 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
                         <td className='align-middle'>Coupling</td>
@@ -288,13 +287,10 @@ const detailsRecSatu = ({ params }) => {
                       <tr>
                         <td className='align-middle'>Bearing Fix Temperatur</td>
                         <td className='align-middle'>&lt; 60⁰</td>
-                        <td className='p-0 align-middle text-center'>
-                          <Form.Check
-                            type="checkbox"
-                            id='reiStTempFix' name="reiStTempFix"
-                            className="large-checkbox"
-                            checked={data.re1_4_temp_fix}
-                          /></td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='reiStTempFree' name="reiStTempFree" placeholder=""
+                          value={data.re1_4_temp_fix}
+                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_4_temp_fix) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -329,12 +325,10 @@ const detailsRecSatu = ({ params }) => {
                         <td className='align-middle'>Temp Reducer Boogie</td>
                         <td className='align-middle'>&lt; 60⁰</td>
                         <td className='p-0 align-middle text-center'>
-                          <Form.Check
-                            type="checkbox"
-                            id='reiBmRed' name="reiBmRed"
-                            className="large-checkbox"
-                            checked={data.re1_5_red_boogie}
-                          /></td>
+                        <Form.Control
+                          style={{ height: '50px' }} type="number" id='reiStTempFree' name="reiStTempFree" placeholder=""
+                          value={data.re1_5_red_boogie}
+                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_5_red_boogie) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -359,13 +353,10 @@ const detailsRecSatu = ({ params }) => {
                       <td className='align-middle'>Temp Reducer Boogie</td>
                       <td className='align-middle'>&lt; 60⁰</td>
                         <td className='p-0 align-middle text-center'>
-                          <Form.Check
-                            type="checkbox"
-                            id='reiBnRed'
-                            name='reiBnRed'
-                            className="large-checkbox"
-                            checked={data.re1_6_red_boogie}
-                          /></td>
+                        <Form.Control
+                          style={{ height: '50px' }} type="number" id='reiStTempFree' name="reiStTempFree" placeholder=""
+                          value={data.re1_6_red_boogie}
+                        /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.re1_6_red_boogie) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
                       </tr>
                       <tr>
@@ -1154,7 +1145,7 @@ const detailsRecSatu = ({ params }) => {
                         /></td>
                       </tr>
                     </tbody>
-                  </Table>
+                  </Table>               
                 </Form>
               </Col>
             </div>

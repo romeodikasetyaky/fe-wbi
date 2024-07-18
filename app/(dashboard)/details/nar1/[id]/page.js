@@ -529,6 +529,15 @@ const detailsNarSatu = ({ params }) => {
                             checked={data.hc1_4_noise}
                           /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_noise ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
+                      </tr>  
+                        <tr>
+                        <td className='align-middle'>Temperatur</td>
+                        <td className='align-middle'>&lt; 60⁰</td>
+                        <td className='p-0'><Form.Control
+                          style={{ height: '50px' }} type="number" id='hciRbpTemp' name="hciRbpTemp" placeholder=""
+                          value={data.hc1_4_temp}
+                        /></td>
+                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_4_temp) ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
 
                       </tr>
                       <tr>
@@ -543,17 +552,6 @@ const detailsNarSatu = ({ params }) => {
                             checked={data.hc1_4_seal}
                           /></td>
                         <td className='align-middle'><b style={{ color: 'red' }}>{data.hc1_4_seal ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
-
-                      </tr>
-                      <tr>
-                        <td className='align-middle'>Temperatur</td>
-                        <td className='align-middle'>&lt; 60⁰</td>
-                        <td className='p-0'><Form.Control
-                          style={{ height: '50px' }} type="number" id='hciRbpTemp' name="hciRbpTemp" placeholder=""
-                          value={data.hc1_4_temp}
-                        /></td>
-                        <td className='align-middle'><b style={{ color: 'red' }}>{parseInt(data.hc1_4_temp) < 60 ? <span style={{ color: 'green' }}>Normal</span>  : <span style={{ color: 'red' }}>Tidak Normal</span>}</b></td>
-
                       </tr>
                       <tr>
                         <td className='align-middle'>Level oli</td>
